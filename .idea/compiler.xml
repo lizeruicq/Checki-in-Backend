@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="tj-gateway" />
+        <module name="tj-common" />
+        <module name="tj-user" />
+        <module name="tj-auth-gateway-sdk" />
+        <module name="tj-daily" />
+        <module name="tj-auth-resource-sdk" />
+        <module name="ai" />
+        <module name="tj-auth-service" />
+        <module name="tj-api" />
+        <module name="tj-auth-common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ai_application" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ai" options="-parameters" />
+      <module name="ai_application" options="-parameters" />
+      <module name="tj-api" options="-parameters" />
+      <module name="tj-auth" options="" />
+      <module name="tj-auth-common" options="-parameters" />
+      <module name="tj-auth-gateway-sdk" options="-parameters" />
+      <module name="tj-auth-resource-sdk" options="-parameters" />
+      <module name="tj-auth-service" options="-parameters" />
+      <module name="tj-common" options="-parameters" />
+      <module name="tj-daily" options="-parameters" />
+      <module name="tj-gateway" options="-parameters" />
+      <module name="tj-user" options="-parameters" />
+    </option>
+  </component>
+</project>

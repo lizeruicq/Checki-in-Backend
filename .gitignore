@@ -1,0 +1,11 @@
+# Project exclude paths
+/ai/target/
+/tj-api/target/
+/tj-auth/tj-auth-common/target/
+/tj-auth/tj-auth-gateway-sdk/target/
+/tj-auth/tj-auth-resource-sdk/target/
+/tj-auth/tj-auth-service/target/
+/tj-common/target/
+/tj-daily/target/
+/tj-gateway/target/
+/tj-user/target/
