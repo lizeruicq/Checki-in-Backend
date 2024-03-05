@@ -1,7 +1,9 @@
 package com.tianji.daily.controller;
 
+import com.tianji.common.domain.dto.PageDTO;
 import com.tianji.daily.domain.dto.DailyDTO;
-import com.tianji.daily.service.IDailyDetailService;
+import com.tianji.daily.domain.query.DailyPageQuery;
+import com.tianji.daily.domain.vo.DailyVO;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -35,6 +37,13 @@ public class DailyController {
         dailyDTO.setId(null);
         dailyService.saveDaily(dailyDTO);
 
+    }
+
+    @ApiOperation("分页查询考勤信息")
+    @PostMapping
+    public PageDTO<DailyVO> queryDailyPage(DailyPageQuery pageQuery)
+    {
+        return dailyService.queryDailyPage(pageQuery);
     }
 
 

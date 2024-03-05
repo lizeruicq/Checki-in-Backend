@@ -1,20 +1,19 @@
-//package com.tianji.api.cache;
-//
-//import com.github.benmanes.caffeine.cache.Cache;
-//import com.tianji.api.client.course.CategoryClient;
-//import com.tianji.api.dto.course.CategoryBasicDTO;
-//import com.tianji.common.utils.CollUtils;
-//import lombok.RequiredArgsConstructor;
-//
-//import java.util.ArrayList;
-//import java.util.List;
-//import java.util.Map;
-//import java.util.function.Function;
-//import java.util.stream.Collectors;
-//
-//@RequiredArgsConstructor
-//public class CategoryCache {
-//
+package com.tianji.api.cache;
+
+import com.github.benmanes.caffeine.cache.Cache;
+
+import com.tianji.common.utils.CollUtils;
+import lombok.RequiredArgsConstructor;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+@RequiredArgsConstructor
+public class CategoryCache {
+
 //    private final Cache<String, Map<Long, CategoryBasicDTO>> categoryCaches;
 //
 //    private final CategoryClient categoryClient;
@@ -90,4 +89,4 @@
 //        CategoryBasicDTO lv1 = map.get(lv2.getParentId());
 //        return lv1.getName() + "/" + lv2.getName() + "/" + lv3.getName();
 //    }
-//}
+}

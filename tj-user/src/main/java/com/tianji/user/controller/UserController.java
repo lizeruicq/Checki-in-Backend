@@ -102,7 +102,8 @@ public class UserController {
 
     @ApiOperation("分页查询用户信息")
     @GetMapping("page")
-    public PageDTO<UserDetailVO> queryUserPage(UserPageQuery pageQuery){
+    public PageDTO<UserDetailVO> queryUserPage(UserPageQuery pageQuery)
+    {
         return userService.queryUserPage(pageQuery);
     }
 

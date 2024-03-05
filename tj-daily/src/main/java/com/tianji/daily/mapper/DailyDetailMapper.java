@@ -1,7 +1,10 @@
 package com.tianji.daily.mapper;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.tianji.daily.domain.po.DailyDetail;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * <p>
@@ -13,4 +16,4 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface DailyDetailMapper extends BaseMapper<DailyDetail> {
 
-}
+   }

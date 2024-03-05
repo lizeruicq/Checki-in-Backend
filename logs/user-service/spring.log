@@ -140,3 +140,125 @@
 16:42:48.978-[LAPTOP-N7NFBKIR][sys]-- INFO 12720 --- [ionShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
 16:42:48.978-[LAPTOP-N7NFBKIR][sys]-- INFO 12720 --- [ionShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
 16:42:48.979-[LAPTOP-N7NFBKIR][sys]-- INFO 12720 --- [ionShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+22:53:49.027-[LAPTOP-N7NFBKIR][sys]-- INFO 23984 --- [           main] com.tianji.user.UserApplication          : The following 1 profile is active: "remote"
+22:53:49.358-[LAPTOP-N7NFBKIR][sys]--ERROR 23984 --- [           main] o.s.boot.SpringApplication               : Application run failed
+java.lang.IllegalStateException: Unable to read meta-data for class com.tianji.api.config.CategoryCacheConfig
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getAnnotationMetadata(AutoConfigurationSorter.java:237) ~[spring-boot-autoconfigure-2.7.2.jar:2.7.2]
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getOrder(AutoConfigurationSorter.java:208) ~[spring-boot-autoconfigure-2.7.2.jar:2.7.2]
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.access$000(AutoConfigurationSorter.java:154) ~[spring-boot-autoconfigure-2.7.2.jar:2.7.2]
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter.lambda$getInPriorityOrder$0(AutoConfigurationSorter.java:63) ~[spring-boot-autoconfigure-2.7.2.jar:2.7.2]
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:360) ~[na:na]
+	at java.base/java.util.TimSort.sort(TimSort.java:234) ~[na:na]
+	at java.base/java.util.Arrays.sort(Arrays.java:1515) ~[na:na]
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1750) ~[na:na]
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter.getInPriorityOrder(AutoConfigurationSorter.java:62) ~[spring-boot-autoconfigure-2.7.2.jar:2.7.2]
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.sortAutoConfigurations(AutoConfigurationImportSelector.java:474) ~[spring-boot-autoconfigure-2.7.2.jar:2.7.2]
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.selectImports(AutoConfigurationImportSelector.java:459) ~[spring-boot-autoconfigure-2.7.2.jar:2.7.2]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGrouping.getImports(ConfigurationClassParser.java:882) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.2.jar:2.7.2]
+	at com.tianji.user.UserApplication.main(UserApplication.java:19) ~[classes/:na]
+Caused by: java.io.FileNotFoundException: class path resource [com/tianji/api/config/CategoryCacheConfig.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.22.jar:5.3.22]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55) ~[spring-core-5.3.22.jar:5.3.22]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:49) ~[spring-core-5.3.22.jar:5.3.22]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-5.3.22.jar:5.3.22]
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-5.3.22.jar:5.3.22]
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getAnnotationMetadata(AutoConfigurationSorter.java:233) ~[spring-boot-autoconfigure-2.7.2.jar:2.7.2]
+	... 25 common frames omitted
+22:58:13.739-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] com.tianji.user.UserApplication          : The following 1 profile is active: "remote"
+22:58:14.599-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+22:58:14.600-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+22:58:14.619-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+22:58:14.869-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f6f14045-9beb-353d-801e-20128d63459a
+22:58:15.092-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22:58:15.097-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22:58:15.098-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$591/0x00000001005a7040] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22:58:15.100-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22:58:15.129-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22:58:15.132-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22:58:15.328-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+22:58:15.336-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+22:58:15.336-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+22:58:15.440-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+22:58:15.440-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1687 ms
+22:58:16.596-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'auth-service' URL not provided. Will try picking an instance via load-balancing.
+22:58:16.996-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+22:58:18.125-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+22:58:18.125-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+22:58:18.126-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+22:58:18.185-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+22:58:18.189-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8082, ip='localhost', weight=1.0, serviceName='DEFAULT_GROUP@@user-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+22:58:18.206-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] f923fb34-cb0a-4c06-8fca-ad61ea61a3f0 registering service DEFAULT_GROUP@@user-service with instance: Instance{instanceId='null', ip='localhost', port=8082, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+22:58:18.222-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP user-service localhost:8082 register finished
+22:58:18.731-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [g.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"name\":\"DEFAULT_GROUP@@user-service\",\"clusters\":\"DEFAULT\",\"cacheMillis\":10000,\"hosts\":[{\"instanceId\":\"localhost#8082#DEFAULT#DEFAULT_GROUP@@user-service\",\"ip\":\"localhost\",\"port\":8082,\"weight\":1.0,\"healthy\":true,\"enabled\":true,\"ephemeral\":true,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@user-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"instanceHeartBeatInterval\":5000,\"instanceHeartBeatTimeOut\":15000,\"ipDeleteTimeout\":30000}],\"lastRefTime\":1709477898853,\"checksum\":\"\",\"allIPs\":false,\"reachProtectionThreshold\":false,\"valid\":true}","lastRefTime":62683647691104} from /192.168.1.37
+22:58:18.738-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [g.push.receiver] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@user-service@@DEFAULT -> [{"instanceId":"localhost#8082#DEFAULT#DEFAULT_GROUP@@user-service","ip":"localhost","port":8082,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@user-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+22:58:18.742-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] com.tianji.user.UserApplication          : Started UserApplication in 7.599 seconds (JVM running for 9.116)
+22:58:18.746-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] c.a.n.client.config.impl.ClientWorker    : [fixed-8.134.236.213_8848-0b28cd9d-6c25-4aeb-8607-80a3c0361484] [subscribe] user-service.yaml+DEFAULT_GROUP+0b28cd9d-6c25-4aeb-8607-80a3c0361484
+22:58:18.746-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] c.a.nacos.client.config.impl.CacheData   : [fixed-8.134.236.213_8848-0b28cd9d-6c25-4aeb-8607-80a3c0361484] [add-listener] ok, tenant=0b28cd9d-6c25-4aeb-8607-80a3c0361484, dataId=user-service.yaml, group=DEFAULT_GROUP, cnt=1
+22:58:18.746-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : listening config: dataId=user-service.yaml, group=DEFAULT_GROUP
+22:58:18.747-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] c.a.n.client.config.impl.ClientWorker    : [fixed-8.134.236.213_8848-0b28cd9d-6c25-4aeb-8607-80a3c0361484] [subscribe] user-service+DEFAULT_GROUP+0b28cd9d-6c25-4aeb-8607-80a3c0361484
+22:58:18.747-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] c.a.nacos.client.config.impl.CacheData   : [fixed-8.134.236.213_8848-0b28cd9d-6c25-4aeb-8607-80a3c0361484] [add-listener] ok, tenant=0b28cd9d-6c25-4aeb-8607-80a3c0361484, dataId=user-service, group=DEFAULT_GROUP, cnt=1
+22:58:18.747-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : listening config: dataId=user-service, group=DEFAULT_GROUP
+22:58:18.747-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] c.a.n.client.config.impl.ClientWorker    : [fixed-8.134.236.213_8848-0b28cd9d-6c25-4aeb-8607-80a3c0361484] [subscribe] user-service-remote.yaml+DEFAULT_GROUP+0b28cd9d-6c25-4aeb-8607-80a3c0361484
+22:58:18.747-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] c.a.nacos.client.config.impl.CacheData   : [fixed-8.134.236.213_8848-0b28cd9d-6c25-4aeb-8607-80a3c0361484] [add-listener] ok, tenant=0b28cd9d-6c25-4aeb-8607-80a3c0361484, dataId=user-service-remote.yaml, group=DEFAULT_GROUP, cnt=1
+22:58:18.747-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : listening config: dataId=user-service-remote.yaml, group=DEFAULT_GROUP
+22:58:18.748-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [           main] com.tianji.user.UserApplication          : --/
+---------------------------------------------------------------------------------------
+	Application 'user-service' is running! Access URLs:
+	Local: 		http://localhost:8082
+	External: 	http://192.168.1.36:8082
+	Profile(s): 	[remote]
+---------------------------------------------------------------------------------------
+22:58:18.749-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [g.push.receiver] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@user-service@@DEFAULT -> [{"instanceId":"localhost#8082#DEFAULT#DEFAULT_GROUP@@user-service","ip":"localhost","port":8082,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@user-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+22:58:32.985-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:58:32.986-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+22:58:32.992-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+22:58:58.132-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [io-8082-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+22:58:58.713-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [io-8082-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+22:58:58.728-[LAPTOP-N7NFBKIR][sys]--DEBUG 23172 --- [io-8082-exec-10] c.t.user.mapper.UserMapper.selectOne     : ==>  Preparing: SELECT id,username,password,status,role,create_time,update_time,creater,updater FROM user WHERE (username = ?)
+22:58:58.760-[LAPTOP-N7NFBKIR][sys]--DEBUG 23172 --- [io-8082-exec-10] c.t.user.mapper.UserMapper.selectOne     : ==> Parameters: chn0028042(String)
+22:58:58.795-[LAPTOP-N7NFBKIR][sys]--DEBUG 23172 --- [io-8082-exec-10] c.t.user.mapper.UserMapper.selectOne     : <==      Total: 1
+22:59:47.013-[LAPTOP-N7NFBKIR][sys]--DEBUG 23172 --- [nio-8082-exec-7] c.t.user.mapper.UserMapper.selectOne     : ==>  Preparing: SELECT id,username,password,status,role,create_time,update_time,creater,updater FROM user WHERE (username = ?)
+22:59:47.013-[LAPTOP-N7NFBKIR][sys]--DEBUG 23172 --- [nio-8082-exec-7] c.t.user.mapper.UserMapper.selectOne     : ==> Parameters: chn0028042(String)
+22:59:47.073-[LAPTOP-N7NFBKIR][sys]--DEBUG 23172 --- [nio-8082-exec-7] c.t.user.mapper.UserMapper.selectOne     : <==      Total: 1
+22:59:53.350-[LAPTOP-N7NFBKIR][sys]-- WARN 23172 --- [      Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+22:59:53.350-[LAPTOP-N7NFBKIR][sys]-- WARN 23172 --- [       Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+22:59:53.352-[LAPTOP-N7NFBKIR][sys]-- WARN 23172 --- [      Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+22:59:53.353-[LAPTOP-N7NFBKIR][sys]-- WARN 23172 --- [       Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+22:59:53.747-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [ionShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+22:59:53.747-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [ionShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@user-service:localhost:8082 from beat map.
+22:59:53.747-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [ionShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] f923fb34-cb0a-4c06-8fca-ad61ea61a3f0 deregistering service DEFAULT_GROUP@@user-service with instance: Instance{instanceId='null', ip='localhost', port=8082, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+22:59:53.759-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [ionShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+22:59:53.763-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [ionShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+22:59:54.331-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [g.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"name\":\"DEFAULT_GROUP@@user-service\",\"clusters\":\"DEFAULT\",\"cacheMillis\":10000,\"hosts\":[],\"lastRefTime\":1709477994453,\"checksum\":\"\",\"allIPs\":false,\"reachProtectionThreshold\":false,\"valid\":true}","lastRefTime":62779247758316} from /192.168.1.37
+22:59:54.333-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [g.push.receiver] com.alibaba.nacos.client.naming          : removed ips(1) service: DEFAULT_GROUP@@user-service@@DEFAULT -> [{"instanceId":"localhost#8082#DEFAULT#DEFAULT_GROUP@@user-service","ip":"localhost","port":8082,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@user-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+22:59:54.338-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [g.push.receiver] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@user-service@@DEFAULT -> []
+22:59:56.795-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [ionShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+22:59:56.796-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [ionShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+22:59:59.500-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [ionShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+23:00:02.524-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [ionShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+23:00:02.526-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [ionShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+23:00:02.526-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [ionShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+23:00:02.527-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [ionShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+23:00:02.527-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [ionShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+23:00:02.528-[LAPTOP-N7NFBKIR][sys]-- WARN 23172 --- [ionShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+23:00:02.528-[LAPTOP-N7NFBKIR][sys]-- WARN 23172 --- [ionShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+23:00:02.528-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [ionShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+23:00:02.528-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [ionShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+23:00:02.529-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [ionShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+23:00:02.544-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+23:00:02.617-[LAPTOP-N7NFBKIR][sys]-- INFO 23172 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

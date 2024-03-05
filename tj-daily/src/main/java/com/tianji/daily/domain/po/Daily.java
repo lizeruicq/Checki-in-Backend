@@ -59,9 +59,23 @@ public class Daily implements Serializable {
     @TableField("name")
     private String name;
 
+    @ApiModelProperty(value = "需求号1")
+    @TableField("rdmno1")
+    private String rdmno1;
+
+    @ApiModelProperty(value = "需求号2")
+    @TableField("rdmno2")
+    private String rdmno2;
+
+    @ApiModelProperty(value = "需求号3")
+    @TableField("rdmno3")
+    private String rdmno3;
+
     @ApiModelProperty(value = "工作人天")
     @TableField("worklength")
     private Double worklength;
+
+
 
     /**
      * 创建时间

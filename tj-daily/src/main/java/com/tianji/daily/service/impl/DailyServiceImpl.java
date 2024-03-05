@@ -1,9 +1,12 @@
 package com.tianji.daily.service.impl;
 
+import com.tianji.common.domain.dto.PageDTO;
 import com.tianji.common.utils.BeanUtils;
 import com.tianji.daily.domain.dto.DailyDTO;
 import com.tianji.daily.domain.po.Daily;
 import com.tianji.daily.domain.po.DailyDetail;
+import com.tianji.daily.domain.query.DailyPageQuery;
+import com.tianji.daily.domain.vo.DailyVO;
 import com.tianji.daily.mapper.DailyMapper;
 import com.tianji.daily.service.IDailyDetailService;
 import com.tianji.daily.service.IDailyService;
@@ -14,7 +17,6 @@ import com.tianji.daily.enums.DateType;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,6 +45,9 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
         daily.setDatetype(type);
         daily.setOndutytime(dailyDTO.getOndutytime());
         daily.setOffdutytime(dailyDTO.getOffdutytime());
+        daily.setRdmno1(dailyDTO.getRdmNo1());
+        daily.setRdmno2(dailyDTO.getRdmNo2());
+        daily.setRdmno3(dailyDTO.getRdmNo3());
         Double worklength = dailyDTO.getWorklength();
         daily.setWorklength(worklength);
         save(daily);
@@ -70,4 +75,12 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
 
 
     }
+
+    @Override
+    public PageDTO<DailyVO> queryDailyPage(DailyPageQuery query) {
+
+        return null;
+    }
+
+
 }
