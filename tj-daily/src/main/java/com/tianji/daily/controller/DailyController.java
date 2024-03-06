@@ -40,7 +40,7 @@ public class DailyController {
     }
 
     @ApiOperation("分页查询考勤信息")
-    @PostMapping
+    @GetMapping("page")
     public PageDTO<DailyVO> queryDailyPage(DailyPageQuery pageQuery)
     {
         return dailyService.queryDailyPage(pageQuery);

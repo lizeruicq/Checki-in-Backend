@@ -1,6 +1,10 @@
 package com.tianji.daily.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.tianji.common.domain.dto.PageDTO;
+import com.tianji.common.enums.UserType;
 import com.tianji.common.utils.BeanUtils;
 import com.tianji.daily.domain.dto.DailyDTO;
 import com.tianji.daily.domain.po.Daily;
@@ -33,6 +37,9 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
 
     @Autowired
     private IDailyDetailService dailyDetailService;
+
+    @Autowired
+    private DailyMapper dailyMapper;
 
     @Override
     @Transactional
@@ -78,9 +85,30 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
 
     @Override
     public PageDTO<DailyVO> queryDailyPage(DailyPageQuery query) {
+        String name = query.getName();
+        String rdmno = query.getRdmno();
+        LocalDate date = query.getDate();
 
-        return null;
-    }
+        Page<Daily> p = query.toMpPageDefaultSortByCreateTimeDesc();
+
+        LambdaQueryWrapper<Daily> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(name!=null,Daily::getName,name);
+
+        wrapper.and(wq  -> wq.eq(rdmno!=null,Daily::getRdmno1,rdmno).
+                or().eq(rdmno!=null,Daily::getRdmno2,rdmno).
+                or().eq(rdmno!=null,Daily::getRdmno3,rdmno));
+
+        wrapper.eq(date!=null,Daily::getDate,date);
+
+        p = dailyMapper.selectPage(p,wrapper);
+
+        return PageDTO.of(p, u -> {
+            DailyVO v = BeanUtils.toBean(u, DailyVO.class);
+            return v;
+        });
+        }
+
+
 
 
 }
