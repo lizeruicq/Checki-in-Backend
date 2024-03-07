@@ -20,64 +20,68 @@ spring:
             refresh: false
     gateway:
       routes:
-        - id: ms
-          uri: lb://media-service
-          predicates:
-            - Path=/ms/**
+#        - id: ms
+#          uri: lb://media-service
+#          predicates:
+#            - Path=/ms/**
         - id: as
           uri: lb://auth-service
           predicates:
             - Path=/as/**
           filters:
             - PreserveHostHeader
-        - id: ds
-          uri: lb://data-service
-          predicates:
-            - Path=/ds/**
-        - id: sms
-          uri: lb://message-service
-          predicates:
-            - Path=/sms/**
+#        - id: ds
+#          uri: lb://data-service
+#          predicates:
+#            - Path=/ds/**
+#        - id: sms
+#          uri: lb://message-service
+#          predicates:
+#            - Path=/sms/**
         - id: us
           uri: lb://user-service
           predicates:
             - Path=/us/**
-        - id: cs
-          uri: lb://course-service
+        - id: ds
+          uri: lb://daily-service
           predicates:
-            - Path=/cs/**
-        - id: os
-          uri: lb://order-service
-          predicates:
-            - Path=/os/**
-        - id: ss
-          uri: lb://search-service
-          predicates:
-            - Path=/ss/**
-        - id: ls
-          uri: lb://learning-service
-          predicates:
-            - Path=/ls/**
-        - id: ps
-          uri: lb://pay-service
-          predicates:
-            - Path=/ps/**
-        - id: ts
-          uri: lb://trade-service
-          predicates:
-            - Path=/ts/**
-        - id: es
-          uri: lb://exam-service
-          predicates:
-            - Path=/es/**
-        - id: rs
-          uri: lb://remark-service
-          predicates:
-            - Path=/rs/**
-        - id: prs
-          uri: lb://promotion-service
-          predicates:
-            - Path=/prs/**
+            - Path=/ds/**
+#        - id: cs
+#          uri: lb://course-service
+#          predicates:
+#            - Path=/cs/**
+#        - id: os
+#          uri: lb://order-service
+#          predicates:
+#            - Path=/os/**
+#        - id: ss
+#          uri: lb://search-service
+#          predicates:
+#            - Path=/ss/**
+#        - id: ls
+#          uri: lb://learning-service
+#          predicates:
+#            - Path=/ls/**
+#        - id: ps
+#          uri: lb://pay-service
+#          predicates:
+#            - Path=/ps/**
+#        - id: ts
+#          uri: lb://trade-service
+#          predicates:
+#            - Path=/ts/**
+#        - id: es
+#          uri: lb://exam-service
+#          predicates:
+#            - Path=/es/**
+#        - id: rs
+#          uri: lb://remark-service
+#          predicates:
+#            - Path=/rs/**
+#        - id: prs
+#          uri: lb://promotion-service
+#          predicates:
+#            - Path=/prs/**
       default-filters:
         - StripPrefix=1
       globalcors: # 全局的跨域处理

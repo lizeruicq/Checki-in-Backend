@@ -62,3 +62,959 @@
 00:08:00.420-[LAPTOP-93DPAS1G][sys]--DEBUG 7176 --- [nio-8082-exec-5] c.t.u.m.UserDetailMapper.queryByPage     : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.id, u.username, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id ORDER BY id ASC LIMIT ?
 00:08:00.420-[LAPTOP-93DPAS1G][sys]--DEBUG 7176 --- [nio-8082-exec-5] c.t.u.m.UserDetailMapper.queryByPage     : ==> Parameters: 5(Long)
 00:08:00.422-[LAPTOP-93DPAS1G][sys]--DEBUG 7176 --- [nio-8082-exec-5] c.t.u.m.UserDetailMapper.queryByPage     : <==      Total: 2
+17:24:18.176-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] com.tianji.user.UserApplication          : The following 1 profile is active: "local"
+17:24:19.287-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:24:19.289-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+17:24:19.320-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+17:24:19.681-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f6f14045-9beb-353d-801e-20128d63459a
+17:24:19.989-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:24:19.994-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:24:19.995-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$593/0x0000000800571040] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:24:19.998-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:24:20.045-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:24:20.048-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:24:20.391-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+17:24:20.404-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:24:20.404-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+17:24:20.569-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+17:24:20.569-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2372 ms
+17:24:23.737-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'auth-service' URL not provided. Will try picking an instance via load-balancing.
+17:24:24.404-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+17:24:26.359-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+17:24:26.360-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+17:24:26.361-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+17:24:29.737-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+17:24:29.743-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8082, ip='192.168.150.1', weight=1.0, serviceName='DEFAULT_GROUP@@user-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+17:24:29.744-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] f923fb34-cb0a-4c06-8fca-ad61ea61a3f0 registering service DEFAULT_GROUP@@user-service with instance: Instance{instanceId='null', ip='192.168.150.1', port=8082, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+17:24:29.823-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP user-service 192.168.150.1:8082 register finished
+17:24:30.712-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [g.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"name\":\"DEFAULT_GROUP@@user-service\",\"clusters\":\"DEFAULT\",\"cacheMillis\":10000,\"hosts\":[{\"instanceId\":\"192.168.150.1#8082#DEFAULT#DEFAULT_GROUP@@user-service\",\"ip\":\"192.168.150.1\",\"port\":8082,\"weight\":1.0,\"healthy\":true,\"enabled\":true,\"ephemeral\":true,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@user-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"instanceHeartBeatInterval\":5000,\"instanceHeartBeatTimeOut\":15000,\"ipDeleteTimeout\":30000}],\"lastRefTime\":1709803470647,\"checksum\":\"\",\"allIPs\":false,\"reachProtectionThreshold\":false,\"valid\":true}","lastRefTime":125934708975} from /192.168.150.101
+17:24:30.720-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [g.push.receiver] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@user-service@@DEFAULT -> [{"instanceId":"192.168.150.1#8082#DEFAULT#DEFAULT_GROUP@@user-service","ip":"192.168.150.1","port":8082,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@user-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+17:24:30.726-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [g.push.receiver] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@user-service@@DEFAULT -> [{"instanceId":"192.168.150.1#8082#DEFAULT#DEFAULT_GROUP@@user-service","ip":"192.168.150.1","port":8082,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@user-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+17:24:31.519-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] com.tianji.user.UserApplication          : Started UserApplication in 38.012 seconds (JVM running for 39.61)
+17:24:31.525-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] c.a.n.client.config.impl.ClientWorker    : [fixed-192.168.150.101_8848] [subscribe] user-service.yaml+DEFAULT_GROUP
+17:24:31.527-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] c.a.nacos.client.config.impl.CacheData   : [fixed-192.168.150.101_8848] [add-listener] ok, tenant=, dataId=user-service.yaml, group=DEFAULT_GROUP, cnt=1
+17:24:31.527-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : listening config: dataId=user-service.yaml, group=DEFAULT_GROUP
+17:24:31.528-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] c.a.n.client.config.impl.ClientWorker    : [fixed-192.168.150.101_8848] [subscribe] user-service-local.yaml+DEFAULT_GROUP
+17:24:31.528-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] c.a.nacos.client.config.impl.CacheData   : [fixed-192.168.150.101_8848] [add-listener] ok, tenant=, dataId=user-service-local.yaml, group=DEFAULT_GROUP, cnt=1
+17:24:31.528-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : listening config: dataId=user-service-local.yaml, group=DEFAULT_GROUP
+17:24:31.528-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] c.a.n.client.config.impl.ClientWorker    : [fixed-192.168.150.101_8848] [subscribe] user-service+DEFAULT_GROUP
+17:24:31.529-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] c.a.nacos.client.config.impl.CacheData   : [fixed-192.168.150.101_8848] [add-listener] ok, tenant=, dataId=user-service, group=DEFAULT_GROUP, cnt=1
+17:24:31.529-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : listening config: dataId=user-service, group=DEFAULT_GROUP
+17:24:31.530-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [           main] com.tianji.user.UserApplication          : --/
+---------------------------------------------------------------------------------------
+	Application 'user-service' is running! Access URLs:
+	Local: 		http://localhost:8082
+	External: 	http://192.168.150.1:8082
+	Profile(s): 	[local]
+---------------------------------------------------------------------------------------
+17:27:02.054-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:27:02.054-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+17:27:02.055-[LAPTOP-93DPAS1G][sys]-- INFO 24640 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+17:27:02.599-[LAPTOP-93DPAS1G][f6bd02e58e8549dbb15b46aaec56ca8d]-- INFO 24640 --- [nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+17:27:02.859-[LAPTOP-93DPAS1G][f6bd02e58e8549dbb15b46aaec56ca8d]-- INFO 24640 --- [nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+17:27:02.866-[LAPTOP-93DPAS1G][f6bd02e58e8549dbb15b46aaec56ca8d]--DEBUG 24640 --- [nio-8082-exec-1] c.t.user.mapper.UserMapper.selectOne     : ==>  Preparing: SELECT id,username,password,status,role,create_time,update_time,creater,updater FROM user WHERE (username = ?)
+17:27:02.886-[LAPTOP-93DPAS1G][f6bd02e58e8549dbb15b46aaec56ca8d]--DEBUG 24640 --- [nio-8082-exec-1] c.t.user.mapper.UserMapper.selectOne     : ==> Parameters: CHN0028042(String)
+17:27:02.916-[LAPTOP-93DPAS1G][f6bd02e58e8549dbb15b46aaec56ca8d]--DEBUG 24640 --- [nio-8082-exec-1] c.t.user.mapper.UserMapper.selectOne     : <==      Total: 1
+17:27:03.198-[LAPTOP-93DPAS1G][7bab546fc77d4b1fb72947f1bca059a1]--DEBUG 24640 --- [nio-8082-exec-2] c.t.u.mapper.UserDetailMapper.queryById  : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.username ,u.id, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id WHERE u.id = ?
+17:27:03.199-[LAPTOP-93DPAS1G][7bab546fc77d4b1fb72947f1bca059a1]--DEBUG 24640 --- [nio-8082-exec-2] c.t.u.mapper.UserDetailMapper.queryById  : ==> Parameters: 1(Long)
+17:27:03.205-[LAPTOP-93DPAS1G][7bab546fc77d4b1fb72947f1bca059a1]--DEBUG 24640 --- [nio-8082-exec-2] c.t.u.mapper.UserDetailMapper.queryById  : <==      Total: 1
+17:27:08.853-[LAPTOP-93DPAS1G][db80ef8d53d748af8d0c0f322fe269cf]--DEBUG 24640 --- [nio-8082-exec-3] c.t.user.mapper.UserMapper.selectOne     : ==>  Preparing: SELECT id,username,password,status,role,create_time,update_time,creater,updater FROM user WHERE (username = ?)
+17:27:08.854-[LAPTOP-93DPAS1G][db80ef8d53d748af8d0c0f322fe269cf]--DEBUG 24640 --- [nio-8082-exec-3] c.t.user.mapper.UserMapper.selectOne     : ==> Parameters: CHN0028042(String)
+17:27:08.856-[LAPTOP-93DPAS1G][db80ef8d53d748af8d0c0f322fe269cf]--DEBUG 24640 --- [nio-8082-exec-3] c.t.user.mapper.UserMapper.selectOne     : <==      Total: 1
+17:27:08.900-[LAPTOP-93DPAS1G][fe8936804daf40b1a66ffc326c26e4b6]--DEBUG 24640 --- [nio-8082-exec-8] c.t.u.mapper.UserDetailMapper.queryById  : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.username ,u.id, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id WHERE u.id = ?
+17:27:08.900-[LAPTOP-93DPAS1G][fe8936804daf40b1a66ffc326c26e4b6]--DEBUG 24640 --- [nio-8082-exec-8] c.t.u.mapper.UserDetailMapper.queryById  : ==> Parameters: 1(Long)
+17:27:08.902-[LAPTOP-93DPAS1G][fe8936804daf40b1a66ffc326c26e4b6]--DEBUG 24640 --- [nio-8082-exec-8] c.t.u.mapper.UserDetailMapper.queryById  : <==      Total: 1
+17:40:39.202-[LAPTOP-93DPAS1G][6beee02c0b044718b31b319ef8cfa54c]--DEBUG 24640 --- [nio-8082-exec-6] c.t.user.mapper.UserMapper.selectOne     : ==>  Preparing: SELECT id,username,password,status,role,create_time,update_time,creater,updater FROM user WHERE (username = ?)
+17:40:39.202-[LAPTOP-93DPAS1G][6beee02c0b044718b31b319ef8cfa54c]--DEBUG 24640 --- [nio-8082-exec-6] c.t.user.mapper.UserMapper.selectOne     : ==> Parameters: CHN0028042(String)
+17:40:39.206-[LAPTOP-93DPAS1G][6beee02c0b044718b31b319ef8cfa54c]--DEBUG 24640 --- [nio-8082-exec-6] c.t.user.mapper.UserMapper.selectOne     : <==      Total: 1
+17:40:39.253-[LAPTOP-93DPAS1G][bfd884a60e1b4a649d6d6bd247f7bcf8]--DEBUG 24640 --- [nio-8082-exec-5] c.t.u.mapper.UserDetailMapper.queryById  : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.username ,u.id, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id WHERE u.id = ?
+17:40:39.253-[LAPTOP-93DPAS1G][bfd884a60e1b4a649d6d6bd247f7bcf8]--DEBUG 24640 --- [nio-8082-exec-5] c.t.u.mapper.UserDetailMapper.queryById  : ==> Parameters: 1(Long)
+17:40:39.256-[LAPTOP-93DPAS1G][bfd884a60e1b4a649d6d6bd247f7bcf8]--DEBUG 24640 --- [nio-8082-exec-5] c.t.u.mapper.UserDetailMapper.queryById  : <==      Total: 1
+18:19:35.200-[LAPTOP-93DPAS1G][556b6a9a78934eafb464e42741b35c5b]--DEBUG 24640 --- [nio-8082-exec-1] c.t.user.mapper.UserMapper.selectOne     : ==>  Preparing: SELECT id,username,password,status,role,create_time,update_time,creater,updater FROM user WHERE (username = ?)
+18:19:35.202-[LAPTOP-93DPAS1G][556b6a9a78934eafb464e42741b35c5b]--DEBUG 24640 --- [nio-8082-exec-1] c.t.user.mapper.UserMapper.selectOne     : ==> Parameters: CHN0028042(String)
+18:19:35.208-[LAPTOP-93DPAS1G][556b6a9a78934eafb464e42741b35c5b]--DEBUG 24640 --- [nio-8082-exec-1] c.t.user.mapper.UserMapper.selectOne     : <==      Total: 1
+18:19:35.369-[LAPTOP-93DPAS1G][7146558c00ff4e2da002ae76a18266f5]--DEBUG 24640 --- [nio-8082-exec-2] c.t.u.mapper.UserDetailMapper.queryById  : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.username ,u.id, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id WHERE u.id = ?
+18:19:35.370-[LAPTOP-93DPAS1G][7146558c00ff4e2da002ae76a18266f5]--DEBUG 24640 --- [nio-8082-exec-2] c.t.u.mapper.UserDetailMapper.queryById  : ==> Parameters: 1(Long)
+18:19:35.374-[LAPTOP-93DPAS1G][7146558c00ff4e2da002ae76a18266f5]--DEBUG 24640 --- [nio-8082-exec-2] c.t.u.mapper.UserDetailMapper.queryById  : <==      Total: 1
+18:25:48.295-[LAPTOP-93DPAS1G][d97c85689dba4c2ebcf54eb7dfc74008]--DEBUG 24640 --- [nio-8082-exec-4] c.t.user.mapper.UserMapper.selectOne     : ==>  Preparing: SELECT id,username,password,status,role,create_time,update_time,creater,updater FROM user WHERE (username = ?)
+18:25:48.295-[LAPTOP-93DPAS1G][d97c85689dba4c2ebcf54eb7dfc74008]--DEBUG 24640 --- [nio-8082-exec-4] c.t.user.mapper.UserMapper.selectOne     : ==> Parameters: CHN0028042(String)
+18:25:48.302-[LAPTOP-93DPAS1G][d97c85689dba4c2ebcf54eb7dfc74008]--DEBUG 24640 --- [nio-8082-exec-4] c.t.user.mapper.UserMapper.selectOne     : <==      Total: 1
+18:25:48.417-[LAPTOP-93DPAS1G][9ec4de04d3a940b08ac8437e8eeeabc1]--DEBUG 24640 --- [nio-8082-exec-7] c.t.u.mapper.UserDetailMapper.queryById  : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.username ,u.id, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id WHERE u.id = ?
+18:25:48.495-[LAPTOP-93DPAS1G][9ec4de04d3a940b08ac8437e8eeeabc1]--DEBUG 24640 --- [nio-8082-exec-7] c.t.u.mapper.UserDetailMapper.queryById  : ==> Parameters: 1(Long)
+18:25:48.497-[LAPTOP-93DPAS1G][9ec4de04d3a940b08ac8437e8eeeabc1]--DEBUG 24640 --- [nio-8082-exec-7] c.t.u.mapper.UserDetailMapper.queryById  : <==      Total: 1
+18:32:50.877-[LAPTOP-93DPAS1G][7f68816bfb1644d3836252589bdf7cb2]--DEBUG 24640 --- [io-8082-exec-10] c.t.user.mapper.UserMapper.selectOne     : ==>  Preparing: SELECT id,username,password,status,role,create_time,update_time,creater,updater FROM user WHERE (username = ?)
+18:32:50.878-[LAPTOP-93DPAS1G][7f68816bfb1644d3836252589bdf7cb2]--DEBUG 24640 --- [io-8082-exec-10] c.t.user.mapper.UserMapper.selectOne     : ==> Parameters: CHN0028042(String)
+18:32:50.880-[LAPTOP-93DPAS1G][7f68816bfb1644d3836252589bdf7cb2]--DEBUG 24640 --- [io-8082-exec-10] c.t.user.mapper.UserMapper.selectOne     : <==      Total: 1
+18:32:50.949-[LAPTOP-93DPAS1G][71a352a3b8b9440ca8caebf2504e4a91]--DEBUG 24640 --- [nio-8082-exec-9] c.t.u.mapper.UserDetailMapper.queryById  : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.username ,u.id, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id WHERE u.id = ?
+18:32:50.950-[LAPTOP-93DPAS1G][71a352a3b8b9440ca8caebf2504e4a91]--DEBUG 24640 --- [nio-8082-exec-9] c.t.u.mapper.UserDetailMapper.queryById  : ==> Parameters: 1(Long)
+18:32:50.956-[LAPTOP-93DPAS1G][71a352a3b8b9440ca8caebf2504e4a91]--DEBUG 24640 --- [nio-8082-exec-9] c.t.u.mapper.UserDetailMapper.queryById  : <==      Total: 1
+18:40:29.940-[LAPTOP-93DPAS1G][ddb226b8b3a8439dbb0be37519bb0cbf]--DEBUG 24640 --- [nio-8082-exec-3] c.t.user.mapper.UserMapper.selectOne     : ==>  Preparing: SELECT id,username,password,status,role,create_time,update_time,creater,updater FROM user WHERE (username = ?)
+18:40:29.941-[LAPTOP-93DPAS1G][ddb226b8b3a8439dbb0be37519bb0cbf]--DEBUG 24640 --- [nio-8082-exec-3] c.t.user.mapper.UserMapper.selectOne     : ==> Parameters: CHN0028042(String)
+18:40:29.942-[LAPTOP-93DPAS1G][ddb226b8b3a8439dbb0be37519bb0cbf]--DEBUG 24640 --- [nio-8082-exec-3] c.t.user.mapper.UserMapper.selectOne     : <==      Total: 1
+18:40:30.003-[LAPTOP-93DPAS1G][c2e8252733ae48988761a643be4a35df]--DEBUG 24640 --- [nio-8082-exec-8] c.t.u.mapper.UserDetailMapper.queryById  : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.username ,u.id, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id WHERE u.id = ?
+18:40:30.004-[LAPTOP-93DPAS1G][c2e8252733ae48988761a643be4a35df]--DEBUG 24640 --- [nio-8082-exec-8] c.t.u.mapper.UserDetailMapper.queryById  : ==> Parameters: 1(Long)
+18:40:30.006-[LAPTOP-93DPAS1G][c2e8252733ae48988761a643be4a35df]--DEBUG 24640 --- [nio-8082-exec-8] c.t.u.mapper.UserDetailMapper.queryById  : <==      Total: 1
+22:22:50.484-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] com.tianji.user.UserApplication          : The following 1 profile is active: "local"
+22:22:51.759-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+22:22:51.762-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+22:22:51.792-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+22:22:52.179-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f6f14045-9beb-353d-801e-20128d63459a
+22:22:52.533-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22:22:52.539-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22:22:52.540-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$593/0x00000008005a7040] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22:22:52.544-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22:22:52.598-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22:22:52.600-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22:22:52.957-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+22:22:52.984-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+22:22:52.984-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+22:22:53.181-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+22:22:53.181-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2671 ms
+22:22:56.941-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'auth-service' URL not provided. Will try picking an instance via load-balancing.
+22:22:57.540-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+22:23:00.027-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+22:23:00.027-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+22:23:00.028-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+22:23:00.087-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+22:23:00.093-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8082, ip='192.168.150.1', weight=1.0, serviceName='DEFAULT_GROUP@@user-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+22:23:00.095-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] f923fb34-cb0a-4c06-8fca-ad61ea61a3f0 registering service DEFAULT_GROUP@@user-service with instance: Instance{instanceId='null', ip='192.168.150.1', port=8082, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+22:23:00.101-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP user-service 192.168.150.1:8082 register finished
+22:23:00.603-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [g.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"name\":\"DEFAULT_GROUP@@user-service\",\"clusters\":\"DEFAULT\",\"cacheMillis\":10000,\"hosts\":[{\"instanceId\":\"192.168.150.1#8082#DEFAULT#DEFAULT_GROUP@@user-service\",\"ip\":\"192.168.150.1\",\"port\":8082,\"weight\":1.0,\"healthy\":true,\"enabled\":true,\"ephemeral\":true,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@user-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"instanceHeartBeatInterval\":5000,\"instanceHeartBeatTimeOut\":15000,\"ipDeleteTimeout\":30000}],\"lastRefTime\":1709821380856,\"checksum\":\"\",\"allIPs\":false,\"reachProtectionThreshold\":false,\"valid\":true}","lastRefTime":224104744859} from /192.168.150.101
+22:23:00.612-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [g.push.receiver] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@user-service@@DEFAULT -> [{"instanceId":"192.168.150.1#8082#DEFAULT#DEFAULT_GROUP@@user-service","ip":"192.168.150.1","port":8082,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@user-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+22:23:00.617-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [g.push.receiver] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@user-service@@DEFAULT -> [{"instanceId":"192.168.150.1#8082#DEFAULT#DEFAULT_GROUP@@user-service","ip":"192.168.150.1","port":8082,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@user-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+22:23:01.283-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] com.tianji.user.UserApplication          : Started UserApplication in 14.745 seconds (JVM running for 16.63)
+22:23:01.286-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] c.a.n.client.config.impl.ClientWorker    : [fixed-192.168.150.101_8848] [subscribe] user-service.yaml+DEFAULT_GROUP
+22:23:01.287-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] c.a.nacos.client.config.impl.CacheData   : [fixed-192.168.150.101_8848] [add-listener] ok, tenant=, dataId=user-service.yaml, group=DEFAULT_GROUP, cnt=1
+22:23:01.287-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : listening config: dataId=user-service.yaml, group=DEFAULT_GROUP
+22:23:01.287-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] c.a.n.client.config.impl.ClientWorker    : [fixed-192.168.150.101_8848] [subscribe] user-service-local.yaml+DEFAULT_GROUP
+22:23:01.288-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] c.a.nacos.client.config.impl.CacheData   : [fixed-192.168.150.101_8848] [add-listener] ok, tenant=, dataId=user-service-local.yaml, group=DEFAULT_GROUP, cnt=1
+22:23:01.288-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : listening config: dataId=user-service-local.yaml, group=DEFAULT_GROUP
+22:23:01.288-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] c.a.n.client.config.impl.ClientWorker    : [fixed-192.168.150.101_8848] [subscribe] user-service+DEFAULT_GROUP
+22:23:01.288-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] c.a.nacos.client.config.impl.CacheData   : [fixed-192.168.150.101_8848] [add-listener] ok, tenant=, dataId=user-service, group=DEFAULT_GROUP, cnt=1
+22:23:01.288-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : listening config: dataId=user-service, group=DEFAULT_GROUP
+22:23:01.290-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [           main] com.tianji.user.UserApplication          : --/
+---------------------------------------------------------------------------------------
+	Application 'user-service' is running! Access URLs:
+	Local: 		http://localhost:8082
+	External: 	http://192.168.150.1:8082
+	Profile(s): 	[local]
+---------------------------------------------------------------------------------------
+22:23:33.820-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:23:33.822-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+22:23:33.822-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+22:23:34.136-[LAPTOP-93DPAS1G][fdbca9adfb5c4e1595c1bb035de02c9d]-- INFO 27024 --- [nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+22:23:34.409-[LAPTOP-93DPAS1G][fdbca9adfb5c4e1595c1bb035de02c9d]-- INFO 27024 --- [nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+22:23:34.416-[LAPTOP-93DPAS1G][fdbca9adfb5c4e1595c1bb035de02c9d]--DEBUG 27024 --- [nio-8082-exec-1] c.t.user.mapper.UserMapper.selectOne     : ==>  Preparing: SELECT id,username,password,status,role,create_time,update_time,creater,updater FROM user WHERE (username = ?)
+22:23:34.437-[LAPTOP-93DPAS1G][fdbca9adfb5c4e1595c1bb035de02c9d]--DEBUG 27024 --- [nio-8082-exec-1] c.t.user.mapper.UserMapper.selectOne     : ==> Parameters: CHN0028042(String)
+22:23:34.465-[LAPTOP-93DPAS1G][fdbca9adfb5c4e1595c1bb035de02c9d]--DEBUG 27024 --- [nio-8082-exec-1] c.t.user.mapper.UserMapper.selectOne     : <==      Total: 1
+22:23:34.752-[LAPTOP-93DPAS1G][c07b1dfb25344ebf974c7052ef8690b5]--DEBUG 27024 --- [nio-8082-exec-2] c.t.u.mapper.UserDetailMapper.queryById  : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.username ,u.id, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id WHERE u.id = ?
+22:23:34.753-[LAPTOP-93DPAS1G][c07b1dfb25344ebf974c7052ef8690b5]--DEBUG 27024 --- [nio-8082-exec-2] c.t.u.mapper.UserDetailMapper.queryById  : ==> Parameters: 1(Long)
+22:23:34.759-[LAPTOP-93DPAS1G][c07b1dfb25344ebf974c7052ef8690b5]--DEBUG 27024 --- [nio-8082-exec-2] c.t.u.mapper.UserDetailMapper.queryById  : <==      Total: 1
+22:23:51.717-[LAPTOP-93DPAS1G][57c97de9fe524bce99aff1faf2a0a3cf]--DEBUG 27024 --- [nio-8082-exec-3] c.t.u.m.U.queryByPage_mpCount            : ==>  Preparing: SELECT COUNT(*) FROM `user` u
+22:23:51.717-[LAPTOP-93DPAS1G][57c97de9fe524bce99aff1faf2a0a3cf]--DEBUG 27024 --- [nio-8082-exec-3] c.t.u.m.U.queryByPage_mpCount            : ==> Parameters: 
+22:23:51.720-[LAPTOP-93DPAS1G][57c97de9fe524bce99aff1faf2a0a3cf]--DEBUG 27024 --- [nio-8082-exec-3] c.t.u.m.U.queryByPage_mpCount            : <==      Total: 1
+22:23:51.730-[LAPTOP-93DPAS1G][57c97de9fe524bce99aff1faf2a0a3cf]--DEBUG 27024 --- [nio-8082-exec-3] c.t.u.m.UserDetailMapper.queryByPage     : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.id, u.username, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id ORDER BY create_time DESC LIMIT ?
+22:23:51.730-[LAPTOP-93DPAS1G][57c97de9fe524bce99aff1faf2a0a3cf]--DEBUG 27024 --- [nio-8082-exec-3] c.t.u.m.UserDetailMapper.queryByPage     : ==> Parameters: 10(Long)
+22:23:51.735-[LAPTOP-93DPAS1G][57c97de9fe524bce99aff1faf2a0a3cf]--DEBUG 27024 --- [nio-8082-exec-3] c.t.u.m.UserDetailMapper.queryByPage     : <==      Total: 2
+22:24:39.147-[LAPTOP-93DPAS1G][6bcb19bff311453aa4d9b41ad3c9975e]--DEBUG 27024 --- [nio-8082-exec-8] c.t.u.m.U.queryByPage_mpCount            : ==>  Preparing: SELECT COUNT(*) FROM `user` u
+22:24:39.147-[LAPTOP-93DPAS1G][6bcb19bff311453aa4d9b41ad3c9975e]--DEBUG 27024 --- [nio-8082-exec-8] c.t.u.m.U.queryByPage_mpCount            : ==> Parameters: 
+22:24:39.161-[LAPTOP-93DPAS1G][6bcb19bff311453aa4d9b41ad3c9975e]--DEBUG 27024 --- [nio-8082-exec-8] c.t.u.m.U.queryByPage_mpCount            : <==      Total: 1
+22:24:39.165-[LAPTOP-93DPAS1G][6bcb19bff311453aa4d9b41ad3c9975e]--DEBUG 27024 --- [nio-8082-exec-8] c.t.u.m.UserDetailMapper.queryByPage     : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.id, u.username, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id ORDER BY create_time DESC LIMIT ?
+22:24:39.165-[LAPTOP-93DPAS1G][6bcb19bff311453aa4d9b41ad3c9975e]--DEBUG 27024 --- [nio-8082-exec-8] c.t.u.m.UserDetailMapper.queryByPage     : ==> Parameters: 10(Long)
+22:24:39.173-[LAPTOP-93DPAS1G][6bcb19bff311453aa4d9b41ad3c9975e]--DEBUG 27024 --- [nio-8082-exec-8] c.t.u.m.UserDetailMapper.queryByPage     : <==      Total: 2
+22:29:32.599-[LAPTOP-93DPAS1G][80b1e7ae88b0439682b4d4ac014757ef]--DEBUG 27024 --- [nio-8082-exec-7] c.t.user.mapper.UserMapper.selectOne     : ==>  Preparing: SELECT id,username,password,status,role,create_time,update_time,creater,updater FROM user WHERE (username = ?)
+22:29:32.600-[LAPTOP-93DPAS1G][80b1e7ae88b0439682b4d4ac014757ef]--DEBUG 27024 --- [nio-8082-exec-7] c.t.user.mapper.UserMapper.selectOne     : ==> Parameters: CHN0028042(String)
+22:29:32.602-[LAPTOP-93DPAS1G][80b1e7ae88b0439682b4d4ac014757ef]--DEBUG 27024 --- [nio-8082-exec-7] c.t.user.mapper.UserMapper.selectOne     : <==      Total: 1
+22:29:32.662-[LAPTOP-93DPAS1G][bfb9380d7105416e99dc9ac23d190c6d]--DEBUG 27024 --- [nio-8082-exec-5] c.t.u.mapper.UserDetailMapper.queryById  : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.username ,u.id, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id WHERE u.id = ?
+22:29:32.662-[LAPTOP-93DPAS1G][bfb9380d7105416e99dc9ac23d190c6d]--DEBUG 27024 --- [nio-8082-exec-5] c.t.u.mapper.UserDetailMapper.queryById  : ==> Parameters: 1(Long)
+22:29:32.665-[LAPTOP-93DPAS1G][bfb9380d7105416e99dc9ac23d190c6d]--DEBUG 27024 --- [nio-8082-exec-5] c.t.u.mapper.UserDetailMapper.queryById  : <==      Total: 1
+22:34:46.826-[LAPTOP-93DPAS1G][sys]-- INFO 27024 --- [nio-8082-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [Hm_lvt_500545bbc75c658703f93ac984e1d0e6=1705241556,1705318078,1705369228] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+22:35:28.658-[LAPTOP-93DPAS1G][sys]--DEBUG 27024 --- [nio-8082-exec-7] c.t.u.m.U.queryByPage_mpCount            : ==>  Preparing: SELECT COUNT(*) FROM `user` u
+22:35:28.658-[LAPTOP-93DPAS1G][sys]--DEBUG 27024 --- [nio-8082-exec-7] c.t.u.m.U.queryByPage_mpCount            : ==> Parameters: 
+22:35:28.661-[LAPTOP-93DPAS1G][sys]--DEBUG 27024 --- [nio-8082-exec-7] c.t.u.m.U.queryByPage_mpCount            : <==      Total: 1
+22:35:28.662-[LAPTOP-93DPAS1G][sys]--DEBUG 27024 --- [nio-8082-exec-7] c.t.u.m.UserDetailMapper.queryByPage     : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.id, u.username, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id ORDER BY id ASC LIMIT ?
+22:35:28.663-[LAPTOP-93DPAS1G][sys]--DEBUG 27024 --- [nio-8082-exec-7] c.t.u.m.UserDetailMapper.queryByPage     : ==> Parameters: 5(Long)
+22:35:28.664-[LAPTOP-93DPAS1G][sys]--DEBUG 27024 --- [nio-8082-exec-7] c.t.u.m.UserDetailMapper.queryByPage     : <==      Total: 2
+22:43:28.554-[LAPTOP-93DPAS1G][e4a3565a72604fd0bcd7f89a7fb2e047]--DEBUG 27024 --- [nio-8082-exec-9] c.t.user.mapper.UserMapper.selectOne     : ==>  Preparing: SELECT id,username,password,status,role,create_time,update_time,creater,updater FROM user WHERE (username = ?)
+22:43:28.554-[LAPTOP-93DPAS1G][e4a3565a72604fd0bcd7f89a7fb2e047]--DEBUG 27024 --- [nio-8082-exec-9] c.t.user.mapper.UserMapper.selectOne     : ==> Parameters: CHN0028042(String)
+22:43:28.556-[LAPTOP-93DPAS1G][e4a3565a72604fd0bcd7f89a7fb2e047]--DEBUG 27024 --- [nio-8082-exec-9] c.t.user.mapper.UserMapper.selectOne     : <==      Total: 1
+22:43:28.623-[LAPTOP-93DPAS1G][7354a3a3f35a4308b98722c1a4a5e8f5]--DEBUG 27024 --- [nio-8082-exec-2] c.t.u.mapper.UserDetailMapper.queryById  : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.username ,u.id, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id WHERE u.id = ?
+22:43:28.623-[LAPTOP-93DPAS1G][7354a3a3f35a4308b98722c1a4a5e8f5]--DEBUG 27024 --- [nio-8082-exec-2] c.t.u.mapper.UserDetailMapper.queryById  : ==> Parameters: 1(Long)
+22:43:28.626-[LAPTOP-93DPAS1G][7354a3a3f35a4308b98722c1a4a5e8f5]--DEBUG 27024 --- [nio-8082-exec-2] c.t.u.mapper.UserDetailMapper.queryById  : <==      Total: 1
+22:48:00.203-[LAPTOP-93DPAS1G][2655095e7bf84997aba7208310a08535]--DEBUG 27024 --- [nio-8082-exec-4] c.t.u.m.U.queryByPage_mpCount            : ==>  Preparing: SELECT COUNT(*) FROM `user` u
+22:48:00.204-[LAPTOP-93DPAS1G][2655095e7bf84997aba7208310a08535]--DEBUG 27024 --- [nio-8082-exec-4] c.t.u.m.U.queryByPage_mpCount            : ==> Parameters: 
+22:48:00.207-[LAPTOP-93DPAS1G][2655095e7bf84997aba7208310a08535]--DEBUG 27024 --- [nio-8082-exec-4] c.t.u.m.U.queryByPage_mpCount            : <==      Total: 1
+22:48:00.210-[LAPTOP-93DPAS1G][2655095e7bf84997aba7208310a08535]--DEBUG 27024 --- [nio-8082-exec-4] c.t.u.m.UserDetailMapper.queryByPage     : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.id, u.username, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id ORDER BY create_time DESC LIMIT ?
+22:48:00.211-[LAPTOP-93DPAS1G][2655095e7bf84997aba7208310a08535]--DEBUG 27024 --- [nio-8082-exec-4] c.t.u.m.UserDetailMapper.queryByPage     : ==> Parameters: 10(Long)
+22:48:00.217-[LAPTOP-93DPAS1G][2655095e7bf84997aba7208310a08535]--DEBUG 27024 --- [nio-8082-exec-4] c.t.u.m.UserDetailMapper.queryByPage     : <==      Total: 2
+23:39:51.545-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] com.tianji.user.UserApplication          : The following 1 profile is active: "local"
+23:39:52.412-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+23:39:52.414-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+23:39:52.435-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+23:39:52.712-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f6f14045-9beb-353d-801e-20128d63459a
+23:39:52.956-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:39:52.960-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:39:52.961-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$593/0x00000008005a7040] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:39:52.964-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:39:53.002-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:39:53.004-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:39:53.263-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+23:39:53.273-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+23:39:53.273-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+23:39:53.416-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+23:39:53.416-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1854 ms
+23:39:56.182-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'auth-service' URL not provided. Will try picking an instance via load-balancing.
+23:39:56.601-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+23:39:58.319-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+23:39:58.320-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+23:39:58.320-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+23:39:58.377-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+23:39:58.382-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8082, ip='192.168.150.1', weight=1.0, serviceName='DEFAULT_GROUP@@user-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+23:39:58.383-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] f923fb34-cb0a-4c06-8fca-ad61ea61a3f0 registering service DEFAULT_GROUP@@user-service with instance: Instance{instanceId='null', ip='192.168.150.1', port=8082, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+23:39:58.386-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP user-service 192.168.150.1:8082 register finished
+23:39:58.891-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [g.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"name\":\"DEFAULT_GROUP@@user-service\",\"clusters\":\"DEFAULT\",\"cacheMillis\":10000,\"hosts\":[{\"instanceId\":\"192.168.150.1#8082#DEFAULT#DEFAULT_GROUP@@user-service\",\"ip\":\"192.168.150.1\",\"port\":8082,\"weight\":1.0,\"healthy\":true,\"enabled\":true,\"ephemeral\":true,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@user-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"instanceHeartBeatInterval\":5000,\"instanceHeartBeatTimeOut\":15000,\"ipDeleteTimeout\":30000}],\"lastRefTime\":1709825999131,\"checksum\":\"\",\"allIPs\":false,\"reachProtectionThreshold\":false,\"valid\":true}","lastRefTime":4842379631544} from /192.168.150.101
+23:39:58.897-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [g.push.receiver] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@user-service@@DEFAULT -> [{"instanceId":"192.168.150.1#8082#DEFAULT#DEFAULT_GROUP@@user-service","ip":"192.168.150.1","port":8082,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@user-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+23:39:58.902-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [g.push.receiver] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@user-service@@DEFAULT -> [{"instanceId":"192.168.150.1#8082#DEFAULT#DEFAULT_GROUP@@user-service","ip":"192.168.150.1","port":8082,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@user-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+23:39:59.427-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] com.tianji.user.UserApplication          : Started UserApplication in 10.468 seconds (JVM running for 11.782)
+23:39:59.431-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] c.a.n.client.config.impl.ClientWorker    : [fixed-192.168.150.101_8848] [subscribe] user-service.yaml+DEFAULT_GROUP
+23:39:59.432-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] c.a.nacos.client.config.impl.CacheData   : [fixed-192.168.150.101_8848] [add-listener] ok, tenant=, dataId=user-service.yaml, group=DEFAULT_GROUP, cnt=1
+23:39:59.432-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : listening config: dataId=user-service.yaml, group=DEFAULT_GROUP
+23:39:59.433-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] c.a.n.client.config.impl.ClientWorker    : [fixed-192.168.150.101_8848] [subscribe] user-service-local.yaml+DEFAULT_GROUP
+23:39:59.433-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] c.a.nacos.client.config.impl.CacheData   : [fixed-192.168.150.101_8848] [add-listener] ok, tenant=, dataId=user-service-local.yaml, group=DEFAULT_GROUP, cnt=1
+23:39:59.433-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : listening config: dataId=user-service-local.yaml, group=DEFAULT_GROUP
+23:39:59.433-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] c.a.n.client.config.impl.ClientWorker    : [fixed-192.168.150.101_8848] [subscribe] user-service+DEFAULT_GROUP
+23:39:59.433-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] c.a.nacos.client.config.impl.CacheData   : [fixed-192.168.150.101_8848] [add-listener] ok, tenant=, dataId=user-service, group=DEFAULT_GROUP, cnt=1
+23:39:59.433-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : listening config: dataId=user-service, group=DEFAULT_GROUP
+23:39:59.434-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [           main] com.tianji.user.UserApplication          : --/
+---------------------------------------------------------------------------------------
+	Application 'user-service' is running! Access URLs:
+	Local: 		http://localhost:8082
+	External: 	http://192.168.150.1:8082
+	Profile(s): 	[local]
+---------------------------------------------------------------------------------------
+23:40:10.170-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [nio-8082-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [Hm_lvt_500545bbc75c658703f93ac984e1d0e6=1705241556,1705318078,1705369228] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+23:40:10.177-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:40:10.177-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+23:40:10.178-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+23:40:10.461-[LAPTOP-93DPAS1G][sys]-- INFO 3092 --- [nio-8082-exec-1] c.t.common.validate.EnumValueValidator   : payload>>[]
+23:40:10.472-[LAPTOP-93DPAS1G][sys]--ERROR 3092 --- [nio-8082-exec-1] c.t.c.a.m.advice.CommonExceptionAdvice   : 请求参数校验异常 -> 不能为null|不能为null
+23:40:10.475-[LAPTOP-93DPAS1G][sys]--DEBUG 3092 --- [nio-8082-exec-1] c.t.c.a.m.advice.CommonExceptionAdvice   : 
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void com.tianji.user.controller.UserController.updateCurrentUser(com.tianji.user.domain.dto.UserFormDTO) with 2 errors: [Field error in object 'userFormDTO' on field 'oldPassword': rejected value [null]; codes [NotNull.userFormDTO.oldPassword,NotNull.oldPassword,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userFormDTO.oldPassword,oldPassword]; arguments []; default message [oldPassword]]; default message [不能为null]] [Field error in object 'userFormDTO' on field 'password': rejected value [null]; codes [NotNull.userFormDTO.password,NotNull.password,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userFormDTO.password,password]; arguments []; default message [password]]; default message [不能为null]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:141) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at com.tianji.common.filters.RequestIdFilter.doFilter(RequestIdFilter.java:26) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+23:40:20.220-[LAPTOP-93DPAS1G][sys]--ERROR 3092 --- [nio-8082-exec-2] c.t.c.a.m.advice.CommonExceptionAdvice   : 请求参数校验异常 -> 不能为null|不能为null
+23:40:20.221-[LAPTOP-93DPAS1G][sys]--DEBUG 3092 --- [nio-8082-exec-2] c.t.c.a.m.advice.CommonExceptionAdvice   : 
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void com.tianji.user.controller.UserController.updateCurrentUser(com.tianji.user.domain.dto.UserFormDTO) with 2 errors: [Field error in object 'userFormDTO' on field 'password': rejected value [null]; codes [NotNull.userFormDTO.password,NotNull.password,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userFormDTO.password,password]; arguments []; default message [password]]; default message [不能为null]] [Field error in object 'userFormDTO' on field 'oldPassword': rejected value [null]; codes [NotNull.userFormDTO.oldPassword,NotNull.oldPassword,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userFormDTO.oldPassword,oldPassword]; arguments []; default message [oldPassword]]; default message [不能为null]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:141) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at com.tianji.common.filters.RequestIdFilter.doFilter(RequestIdFilter.java:26) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+23:40:30.579-[LAPTOP-93DPAS1G][sys]--ERROR 3092 --- [nio-8082-exec-4] c.t.c.a.m.advice.CommonExceptionAdvice   : 其他异常 uri : /users/ -> 
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (':' (code 58)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (':' (code 58)): was expecting comma to separate Object entries
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 3, column: 8]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:391) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:343) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:185) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at com.tianji.common.filters.RequestIdFilter.doFilter(RequestIdFilter.java:26) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (':' (code 58)): was expecting comma to separate Object entries
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 3, column: 8]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2391) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:735) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:659) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextFieldName(UTF8StreamJsonParser.java:1056) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:398) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:184) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3682) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:380) ~[spring-web-5.3.22.jar:5.3.22]
+	... 54 common frames omitted
+23:40:32.699-[LAPTOP-93DPAS1G][sys]--ERROR 3092 --- [nio-8082-exec-3] c.t.c.a.m.advice.CommonExceptionAdvice   : 其他异常 uri : /users/ -> 
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (':' (code 58)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (':' (code 58)): was expecting comma to separate Object entries
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 3, column: 8]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:391) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:343) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:185) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at com.tianji.common.filters.RequestIdFilter.doFilter(RequestIdFilter.java:26) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (':' (code 58)): was expecting comma to separate Object entries
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 3, column: 8]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2391) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:735) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:659) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextFieldName(UTF8StreamJsonParser.java:1056) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:398) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:184) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3682) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:380) ~[spring-web-5.3.22.jar:5.3.22]
+	... 54 common frames omitted
+23:40:36.539-[LAPTOP-93DPAS1G][sys]--ERROR 3092 --- [nio-8082-exec-5] c.t.c.a.m.advice.CommonExceptionAdvice   : 其他异常 uri : /users/ -> 
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): expected a value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): expected a value
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 13]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:391) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:343) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:185) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at com.tianji.common.filters.RequestIdFilter.doFilter(RequestIdFilter.java:26) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): expected a value
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 13]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2391) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:735) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:659) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2704) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:855) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:180) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3682) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:380) ~[spring-web-5.3.22.jar:5.3.22]
+	... 54 common frames omitted
+23:40:39.611-[LAPTOP-93DPAS1G][sys]--ERROR 3092 --- [nio-8082-exec-6] c.t.c.a.m.advice.CommonExceptionAdvice   : 其他异常 uri : /users/ -> 
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): expected a value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): expected a value
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 13]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:391) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:343) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:185) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at com.tianji.common.filters.RequestIdFilter.doFilter(RequestIdFilter.java:26) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): expected a value
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 13]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2391) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:735) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:659) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2704) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:855) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:180) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3682) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:380) ~[spring-web-5.3.22.jar:5.3.22]
+	... 54 common frames omitted
+23:40:54.800-[LAPTOP-93DPAS1G][sys]--ERROR 3092 --- [nio-8082-exec-7] c.t.c.a.m.advice.CommonExceptionAdvice   : 其他异常 uri : /users/ -> 
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 3, column: 4]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:391) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:343) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:185) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at com.tianji.common.filters.RequestIdFilter.doFilter(RequestIdFilter.java:26) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 3, column: 4]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2391) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:735) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:659) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextFieldName(UTF8StreamJsonParser.java:1056) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:398) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:184) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3682) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:380) ~[spring-web-5.3.22.jar:5.3.22]
+	... 54 common frames omitted
+23:41:33.974-[LAPTOP-93DPAS1G][sys]--ERROR 3092 --- [nio-8082-exec-8] c.t.c.a.m.advice.CommonExceptionAdvice   : 请求参数校验异常 -> 不能为null|不能为null
+23:41:33.975-[LAPTOP-93DPAS1G][sys]--DEBUG 3092 --- [nio-8082-exec-8] c.t.c.a.m.advice.CommonExceptionAdvice   : 
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void com.tianji.user.controller.UserController.updateCurrentUser(com.tianji.user.domain.dto.UserFormDTO) with 2 errors: [Field error in object 'userFormDTO' on field 'oldPassword': rejected value [null]; codes [NotNull.userFormDTO.oldPassword,NotNull.oldPassword,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userFormDTO.oldPassword,oldPassword]; arguments []; default message [oldPassword]]; default message [不能为null]] [Field error in object 'userFormDTO' on field 'password': rejected value [null]; codes [NotNull.userFormDTO.password,NotNull.password,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userFormDTO.password,password]; arguments []; default message [password]]; default message [不能为null]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:141) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at com.tianji.common.filters.RequestIdFilter.doFilter(RequestIdFilter.java:26) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+23:49:12.875-[LAPTOP-93DPAS1G][sys]--ERROR 3092 --- [nio-8082-exec-3] c.t.c.a.m.advice.CommonExceptionAdvice   : 请求参数校验异常 -> 不能为null|不能为null
+23:49:12.875-[LAPTOP-93DPAS1G][sys]--DEBUG 3092 --- [nio-8082-exec-3] c.t.c.a.m.advice.CommonExceptionAdvice   : 
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void com.tianji.user.controller.UserController.updateCurrentUser(com.tianji.user.domain.dto.UserFormDTO) with 2 errors: [Field error in object 'userFormDTO' on field 'password': rejected value [null]; codes [NotNull.userFormDTO.password,NotNull.password,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userFormDTO.password,password]; arguments []; default message [password]]; default message [不能为null]] [Field error in object 'userFormDTO' on field 'oldPassword': rejected value [null]; codes [NotNull.userFormDTO.oldPassword,NotNull.oldPassword,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userFormDTO.oldPassword,oldPassword]; arguments []; default message [oldPassword]]; default message [不能为null]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:141) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at com.tianji.common.filters.RequestIdFilter.doFilter(RequestIdFilter.java:26) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+23:50:02.207-[LAPTOP-93DPAS1G][4bca4238d5c44110a92c65e3e3a4ca49]-- INFO 3092 --- [nio-8082-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+23:50:02.461-[LAPTOP-93DPAS1G][4bca4238d5c44110a92c65e3e3a4ca49]-- INFO 3092 --- [nio-8082-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+23:50:02.468-[LAPTOP-93DPAS1G][4bca4238d5c44110a92c65e3e3a4ca49]--DEBUG 3092 --- [nio-8082-exec-5] c.t.user.mapper.UserMapper.selectOne     : ==>  Preparing: SELECT id,username,password,status,role,create_time,update_time,creater,updater FROM user WHERE (username = ?)
+23:50:02.486-[LAPTOP-93DPAS1G][4bca4238d5c44110a92c65e3e3a4ca49]--DEBUG 3092 --- [nio-8082-exec-5] c.t.user.mapper.UserMapper.selectOne     : ==> Parameters: CHN0028042(String)
+23:50:02.507-[LAPTOP-93DPAS1G][4bca4238d5c44110a92c65e3e3a4ca49]--DEBUG 3092 --- [nio-8082-exec-5] c.t.user.mapper.UserMapper.selectOne     : <==      Total: 1
+23:50:02.743-[LAPTOP-93DPAS1G][f51cc2fc23e0422ca9af8c19820c36df]--DEBUG 3092 --- [nio-8082-exec-6] c.t.u.mapper.UserDetailMapper.queryById  : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.username ,u.id, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id WHERE u.id = ?
+23:50:02.743-[LAPTOP-93DPAS1G][f51cc2fc23e0422ca9af8c19820c36df]--DEBUG 3092 --- [nio-8082-exec-6] c.t.u.mapper.UserDetailMapper.queryById  : ==> Parameters: 1(Long)
+23:50:02.746-[LAPTOP-93DPAS1G][f51cc2fc23e0422ca9af8c19820c36df]--DEBUG 3092 --- [nio-8082-exec-6] c.t.u.mapper.UserDetailMapper.queryById  : <==      Total: 1
+23:50:07.247-[LAPTOP-93DPAS1G][c7d6d50f06254fc2a2c7ffed5b0da014]--DEBUG 3092 --- [nio-8082-exec-7] c.t.u.m.U.queryByPage_mpCount            : ==>  Preparing: SELECT COUNT(*) FROM `user` u
+23:50:07.248-[LAPTOP-93DPAS1G][c7d6d50f06254fc2a2c7ffed5b0da014]--DEBUG 3092 --- [nio-8082-exec-7] c.t.u.m.U.queryByPage_mpCount            : ==> Parameters: 
+23:50:07.251-[LAPTOP-93DPAS1G][c7d6d50f06254fc2a2c7ffed5b0da014]--DEBUG 3092 --- [nio-8082-exec-7] c.t.u.m.U.queryByPage_mpCount            : <==      Total: 1
+23:50:07.262-[LAPTOP-93DPAS1G][c7d6d50f06254fc2a2c7ffed5b0da014]--DEBUG 3092 --- [nio-8082-exec-7] c.t.u.m.UserDetailMapper.queryByPage     : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.id, u.username, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id ORDER BY create_time DESC LIMIT ?
+23:50:07.262-[LAPTOP-93DPAS1G][c7d6d50f06254fc2a2c7ffed5b0da014]--DEBUG 3092 --- [nio-8082-exec-7] c.t.u.m.UserDetailMapper.queryByPage     : ==> Parameters: 10(Long)
+23:50:07.265-[LAPTOP-93DPAS1G][c7d6d50f06254fc2a2c7ffed5b0da014]--DEBUG 3092 --- [nio-8082-exec-7] c.t.u.m.UserDetailMapper.queryByPage     : <==      Total: 2
+23:50:16.236-[LAPTOP-93DPAS1G][a7269936f8fe426d9f1d4f2bc5b4c555]--DEBUG 3092 --- [nio-8082-exec-8] c.t.u.mapper.UserDetailMapper.queryById  : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.username ,u.id, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id WHERE u.id = ?
+23:50:16.237-[LAPTOP-93DPAS1G][a7269936f8fe426d9f1d4f2bc5b4c555]--DEBUG 3092 --- [nio-8082-exec-8] c.t.u.mapper.UserDetailMapper.queryById  : ==> Parameters: 1(Long)
+23:50:16.239-[LAPTOP-93DPAS1G][a7269936f8fe426d9f1d4f2bc5b4c555]--DEBUG 3092 --- [nio-8082-exec-8] c.t.u.mapper.UserDetailMapper.queryById  : <==      Total: 1
+23:50:26.861-[LAPTOP-93DPAS1G][529d5c1905634cedaf2994d289981a6a]--DEBUG 3092 --- [nio-8082-exec-9] c.t.user.mapper.UserMapper.updateById    : ==>  Preparing: UPDATE user SET username=?, role=? WHERE id=?
+23:50:26.862-[LAPTOP-93DPAS1G][529d5c1905634cedaf2994d289981a6a]--DEBUG 3092 --- [nio-8082-exec-9] c.t.user.mapper.UserMapper.updateById    : ==> Parameters: CHN0028042(String), 0(Integer), 1(Long)
+23:50:26.863-[LAPTOP-93DPAS1G][529d5c1905634cedaf2994d289981a6a]--DEBUG 3092 --- [nio-8082-exec-9] c.t.user.mapper.UserMapper.updateById    : <==    Updates: 1
+23:50:26.868-[LAPTOP-93DPAS1G][529d5c1905634cedaf2994d289981a6a]--DEBUG 3092 --- [nio-8082-exec-9] c.t.u.m.UserDetailMapper.updateById      : ==>  Preparing: UPDATE user_detail SET username=?, role=?, name=?, email=? WHERE id=?
+23:50:26.869-[LAPTOP-93DPAS1G][529d5c1905634cedaf2994d289981a6a]--DEBUG 3092 --- [nio-8082-exec-9] c.t.u.m.UserDetailMapper.updateById      : ==> Parameters: CHN0028042(String), 0(Integer), 李泽睿(String), (String), 1(Long)
+23:50:26.871-[LAPTOP-93DPAS1G][529d5c1905634cedaf2994d289981a6a]--DEBUG 3092 --- [nio-8082-exec-9] c.t.u.m.UserDetailMapper.updateById      : <==    Updates: 1
+23:50:26.930-[LAPTOP-93DPAS1G][f68ce95456644140b6338c82df166f4b]--DEBUG 3092 --- [io-8082-exec-10] c.t.u.m.U.queryByPage_mpCount            : ==>  Preparing: SELECT COUNT(*) FROM `user` u
+23:50:26.931-[LAPTOP-93DPAS1G][f68ce95456644140b6338c82df166f4b]--DEBUG 3092 --- [io-8082-exec-10] c.t.u.m.U.queryByPage_mpCount            : ==> Parameters: 
+23:50:26.933-[LAPTOP-93DPAS1G][f68ce95456644140b6338c82df166f4b]--DEBUG 3092 --- [io-8082-exec-10] c.t.u.m.U.queryByPage_mpCount            : <==      Total: 1
+23:50:26.934-[LAPTOP-93DPAS1G][f68ce95456644140b6338c82df166f4b]--DEBUG 3092 --- [io-8082-exec-10] c.t.u.m.UserDetailMapper.queryByPage     : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.id, u.username, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id ORDER BY create_time DESC LIMIT ?
+23:50:26.934-[LAPTOP-93DPAS1G][f68ce95456644140b6338c82df166f4b]--DEBUG 3092 --- [io-8082-exec-10] c.t.u.m.UserDetailMapper.queryByPage     : ==> Parameters: 10(Long)
+23:50:26.937-[LAPTOP-93DPAS1G][f68ce95456644140b6338c82df166f4b]--DEBUG 3092 --- [io-8082-exec-10] c.t.u.m.UserDetailMapper.queryByPage     : <==      Total: 2
+23:51:31.189-[LAPTOP-93DPAS1G][fac69702f7bf41a3981f3a844e7301e8]--DEBUG 3092 --- [nio-8082-exec-4] c.t.u.m.U.queryByPage_mpCount            : ==>  Preparing: SELECT COUNT(*) FROM `user` u
+23:51:31.189-[LAPTOP-93DPAS1G][fac69702f7bf41a3981f3a844e7301e8]--DEBUG 3092 --- [nio-8082-exec-4] c.t.u.m.U.queryByPage_mpCount            : ==> Parameters: 
+23:51:31.192-[LAPTOP-93DPAS1G][fac69702f7bf41a3981f3a844e7301e8]--DEBUG 3092 --- [nio-8082-exec-4] c.t.u.m.U.queryByPage_mpCount            : <==      Total: 1
+23:51:31.194-[LAPTOP-93DPAS1G][fac69702f7bf41a3981f3a844e7301e8]--DEBUG 3092 --- [nio-8082-exec-4] c.t.u.m.UserDetailMapper.queryByPage     : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.id, u.username, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id ORDER BY create_time DESC LIMIT ?
+23:51:31.195-[LAPTOP-93DPAS1G][fac69702f7bf41a3981f3a844e7301e8]--DEBUG 3092 --- [nio-8082-exec-4] c.t.u.m.UserDetailMapper.queryByPage     : ==> Parameters: 10(Long)
+23:51:31.198-[LAPTOP-93DPAS1G][fac69702f7bf41a3981f3a844e7301e8]--DEBUG 3092 --- [nio-8082-exec-4] c.t.u.m.UserDetailMapper.queryByPage     : <==      Total: 2
+23:54:37.838-[LAPTOP-93DPAS1G][aa7e6592eb554717840b32b3c2698043]--DEBUG 3092 --- [nio-8082-exec-5] c.t.u.m.U.queryByPage_mpCount            : ==>  Preparing: SELECT COUNT(*) FROM `user` u
+23:54:37.838-[LAPTOP-93DPAS1G][aa7e6592eb554717840b32b3c2698043]--DEBUG 3092 --- [nio-8082-exec-5] c.t.u.m.U.queryByPage_mpCount            : ==> Parameters: 
+23:54:37.841-[LAPTOP-93DPAS1G][aa7e6592eb554717840b32b3c2698043]--DEBUG 3092 --- [nio-8082-exec-5] c.t.u.m.U.queryByPage_mpCount            : <==      Total: 1
+23:54:37.844-[LAPTOP-93DPAS1G][aa7e6592eb554717840b32b3c2698043]--DEBUG 3092 --- [nio-8082-exec-5] c.t.u.m.UserDetailMapper.queryByPage     : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.id, u.username, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id ORDER BY create_time DESC LIMIT ?
+23:54:37.845-[LAPTOP-93DPAS1G][aa7e6592eb554717840b32b3c2698043]--DEBUG 3092 --- [nio-8082-exec-5] c.t.u.m.UserDetailMapper.queryByPage     : ==> Parameters: 10(Long)
+23:54:37.850-[LAPTOP-93DPAS1G][aa7e6592eb554717840b32b3c2698043]--DEBUG 3092 --- [nio-8082-exec-5] c.t.u.m.UserDetailMapper.queryByPage     : <==      Total: 2
+00:10:38.314-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] com.tianji.user.UserApplication          : The following 1 profile is active: "local"
+00:10:39.436-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+00:10:39.439-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+00:10:39.465-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+00:10:39.875-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f6f14045-9beb-353d-801e-20128d63459a
+00:10:40.298-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:10:40.306-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:10:40.308-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$593/0x00000008005a7040] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:10:40.314-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:10:40.409-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:10:40.414-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+00:10:40.833-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+00:10:40.845-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+00:10:40.846-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+00:10:40.999-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+00:10:41.000-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2665 ms
+00:10:45.042-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'auth-service' URL not provided. Will try picking an instance via load-balancing.
+00:10:45.564-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+00:10:47.632-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+00:10:47.633-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+00:10:47.633-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+00:10:47.694-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+00:10:47.700-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8082, ip='192.168.150.1', weight=1.0, serviceName='DEFAULT_GROUP@@user-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+00:10:47.701-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] f923fb34-cb0a-4c06-8fca-ad61ea61a3f0 registering service DEFAULT_GROUP@@user-service with instance: Instance{instanceId='null', ip='192.168.150.1', port=8082, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+00:10:47.704-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP user-service 192.168.150.1:8082 register finished
+00:10:48.166-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [g.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"name\":\"DEFAULT_GROUP@@user-service\",\"clusters\":\"DEFAULT\",\"cacheMillis\":10000,\"hosts\":[{\"instanceId\":\"192.168.150.1#8082#DEFAULT#DEFAULT_GROUP@@user-service\",\"ip\":\"192.168.150.1\",\"port\":8082,\"weight\":1.0,\"healthy\":true,\"enabled\":true,\"ephemeral\":true,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@user-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"instanceHeartBeatInterval\":5000,\"instanceHeartBeatTimeOut\":15000,\"ipDeleteTimeout\":30000}],\"lastRefTime\":1709827848402,\"checksum\":\"\",\"allIPs\":false,\"reachProtectionThreshold\":false,\"valid\":true}","lastRefTime":6691650722487} from /192.168.150.101
+00:10:48.174-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [g.push.receiver] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@user-service@@DEFAULT -> [{"instanceId":"192.168.150.1#8082#DEFAULT#DEFAULT_GROUP@@user-service","ip":"192.168.150.1","port":8082,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@user-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+00:10:48.180-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [g.push.receiver] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@user-service@@DEFAULT -> [{"instanceId":"192.168.150.1#8082#DEFAULT#DEFAULT_GROUP@@user-service","ip":"192.168.150.1","port":8082,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@user-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+00:10:48.794-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] com.tianji.user.UserApplication          : Started UserApplication in 15.171 seconds (JVM running for 16.916)
+00:10:48.797-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] c.a.n.client.config.impl.ClientWorker    : [fixed-192.168.150.101_8848] [subscribe] user-service.yaml+DEFAULT_GROUP
+00:10:48.798-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] c.a.nacos.client.config.impl.CacheData   : [fixed-192.168.150.101_8848] [add-listener] ok, tenant=, dataId=user-service.yaml, group=DEFAULT_GROUP, cnt=1
+00:10:48.798-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : listening config: dataId=user-service.yaml, group=DEFAULT_GROUP
+00:10:48.799-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] c.a.n.client.config.impl.ClientWorker    : [fixed-192.168.150.101_8848] [subscribe] user-service-local.yaml+DEFAULT_GROUP
+00:10:48.799-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] c.a.nacos.client.config.impl.CacheData   : [fixed-192.168.150.101_8848] [add-listener] ok, tenant=, dataId=user-service-local.yaml, group=DEFAULT_GROUP, cnt=1
+00:10:48.799-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : listening config: dataId=user-service-local.yaml, group=DEFAULT_GROUP
+00:10:48.799-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] c.a.n.client.config.impl.ClientWorker    : [fixed-192.168.150.101_8848] [subscribe] user-service+DEFAULT_GROUP
+00:10:48.799-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] c.a.nacos.client.config.impl.CacheData   : [fixed-192.168.150.101_8848] [add-listener] ok, tenant=, dataId=user-service, group=DEFAULT_GROUP, cnt=1
+00:10:48.799-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] c.a.c.n.refresh.NacosContextRefresher    : listening config: dataId=user-service, group=DEFAULT_GROUP
+00:10:48.801-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [           main] com.tianji.user.UserApplication          : --/
+---------------------------------------------------------------------------------------
+	Application 'user-service' is running! Access URLs:
+	Local: 		http://localhost:8082
+	External: 	http://192.168.150.1:8082
+	Profile(s): 	[local]
+---------------------------------------------------------------------------------------
+00:11:02.105-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:11:02.105-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+00:11:02.107-[LAPTOP-93DPAS1G][sys]-- INFO 25324 --- [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+00:11:02.418-[LAPTOP-93DPAS1G][d622125a608f4958bf911baceb2860c4]-- INFO 25324 --- [nio-8082-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+00:11:02.689-[LAPTOP-93DPAS1G][d622125a608f4958bf911baceb2860c4]-- INFO 25324 --- [nio-8082-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+00:11:02.694-[LAPTOP-93DPAS1G][d622125a608f4958bf911baceb2860c4]--DEBUG 25324 --- [nio-8082-exec-2] c.t.user.mapper.UserMapper.selectOne     : ==>  Preparing: SELECT id,username,password,status,role,create_time,update_time,creater,updater FROM user WHERE (username = ?)
+00:11:02.715-[LAPTOP-93DPAS1G][d622125a608f4958bf911baceb2860c4]--DEBUG 25324 --- [nio-8082-exec-2] c.t.user.mapper.UserMapper.selectOne     : ==> Parameters: CHN0028042(String)
+00:11:02.735-[LAPTOP-93DPAS1G][d622125a608f4958bf911baceb2860c4]--DEBUG 25324 --- [nio-8082-exec-2] c.t.user.mapper.UserMapper.selectOne     : <==      Total: 1
+00:11:22.307-[LAPTOP-93DPAS1G][5aa61a05af1e46a6ace8c20b57c158bb]--DEBUG 25324 --- [nio-8082-exec-1] c.t.user.mapper.UserMapper.selectOne     : ==>  Preparing: SELECT id,username,password,status,role,create_time,update_time,creater,updater FROM user WHERE (username = ?)
+00:11:22.307-[LAPTOP-93DPAS1G][5aa61a05af1e46a6ace8c20b57c158bb]--DEBUG 25324 --- [nio-8082-exec-1] c.t.user.mapper.UserMapper.selectOne     : ==> Parameters: CHN0028042(String)
+00:11:22.309-[LAPTOP-93DPAS1G][5aa61a05af1e46a6ace8c20b57c158bb]--DEBUG 25324 --- [nio-8082-exec-1] c.t.user.mapper.UserMapper.selectOne     : <==      Total: 1
+00:11:22.384-[LAPTOP-93DPAS1G][26e74b51d92f48c8bb2292f83d382199]--DEBUG 25324 --- [nio-8082-exec-3] c.t.u.mapper.UserDetailMapper.queryById  : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.username ,u.id, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id WHERE u.id = ?
+00:11:22.385-[LAPTOP-93DPAS1G][26e74b51d92f48c8bb2292f83d382199]--DEBUG 25324 --- [nio-8082-exec-3] c.t.u.mapper.UserDetailMapper.queryById  : ==> Parameters: 1(Long)
+00:11:22.388-[LAPTOP-93DPAS1G][26e74b51d92f48c8bb2292f83d382199]--DEBUG 25324 --- [nio-8082-exec-3] c.t.u.mapper.UserDetailMapper.queryById  : <==      Total: 1
+00:16:10.899-[LAPTOP-93DPAS1G][c4368efbca0b455d98462e21e0d0b18a]--DEBUG 25324 --- [nio-8082-exec-6] c.t.u.m.U.queryByPage_mpCount            : ==>  Preparing: SELECT COUNT(*) FROM `user` u
+00:16:10.899-[LAPTOP-93DPAS1G][c4368efbca0b455d98462e21e0d0b18a]--DEBUG 25324 --- [nio-8082-exec-6] c.t.u.m.U.queryByPage_mpCount            : ==> Parameters: 
+00:16:10.902-[LAPTOP-93DPAS1G][c4368efbca0b455d98462e21e0d0b18a]--DEBUG 25324 --- [nio-8082-exec-6] c.t.u.m.U.queryByPage_mpCount            : <==      Total: 1
+00:16:10.912-[LAPTOP-93DPAS1G][c4368efbca0b455d98462e21e0d0b18a]--DEBUG 25324 --- [nio-8082-exec-6] c.t.u.m.UserDetailMapper.queryByPage     : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.id, u.username, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id ORDER BY create_time DESC LIMIT ?
+00:16:10.913-[LAPTOP-93DPAS1G][c4368efbca0b455d98462e21e0d0b18a]--DEBUG 25324 --- [nio-8082-exec-6] c.t.u.m.UserDetailMapper.queryByPage     : ==> Parameters: 10(Long)
+00:16:10.917-[LAPTOP-93DPAS1G][c4368efbca0b455d98462e21e0d0b18a]--DEBUG 25324 --- [nio-8082-exec-6] c.t.u.m.UserDetailMapper.queryByPage     : <==      Total: 2
+00:17:05.925-[LAPTOP-93DPAS1G][ca9dd3994ebe4d27a0236d32295a5cf8]--DEBUG 25324 --- [nio-8082-exec-5] c.t.user.mapper.UserMapper.selectOne     : ==>  Preparing: SELECT id,username,password,status,role,create_time,update_time,creater,updater FROM user WHERE (username = ?)
+00:17:05.925-[LAPTOP-93DPAS1G][ca9dd3994ebe4d27a0236d32295a5cf8]--DEBUG 25324 --- [nio-8082-exec-5] c.t.user.mapper.UserMapper.selectOne     : ==> Parameters: CHN0028042(String)
+00:17:05.927-[LAPTOP-93DPAS1G][ca9dd3994ebe4d27a0236d32295a5cf8]--DEBUG 25324 --- [nio-8082-exec-5] c.t.user.mapper.UserMapper.selectOne     : <==      Total: 1
+00:17:05.980-[LAPTOP-93DPAS1G][479a86222f034183a46de34982928920]--DEBUG 25324 --- [nio-8082-exec-9] c.t.u.mapper.UserDetailMapper.queryById  : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.username ,u.id, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id WHERE u.id = ?
+00:17:05.981-[LAPTOP-93DPAS1G][479a86222f034183a46de34982928920]--DEBUG 25324 --- [nio-8082-exec-9] c.t.u.mapper.UserDetailMapper.queryById  : ==> Parameters: 1(Long)
+00:17:05.983-[LAPTOP-93DPAS1G][479a86222f034183a46de34982928920]--DEBUG 25324 --- [nio-8082-exec-9] c.t.u.mapper.UserDetailMapper.queryById  : <==      Total: 1
+00:17:08.289-[LAPTOP-93DPAS1G][7c2b055810134f0b9b1512f11cd76488]--DEBUG 25324 --- [io-8082-exec-10] c.t.u.m.U.queryByPage_mpCount            : ==>  Preparing: SELECT COUNT(*) FROM `user` u
+00:17:08.290-[LAPTOP-93DPAS1G][7c2b055810134f0b9b1512f11cd76488]--DEBUG 25324 --- [io-8082-exec-10] c.t.u.m.U.queryByPage_mpCount            : ==> Parameters: 
+00:17:08.292-[LAPTOP-93DPAS1G][7c2b055810134f0b9b1512f11cd76488]--DEBUG 25324 --- [io-8082-exec-10] c.t.u.m.U.queryByPage_mpCount            : <==      Total: 1
+00:17:08.294-[LAPTOP-93DPAS1G][7c2b055810134f0b9b1512f11cd76488]--DEBUG 25324 --- [io-8082-exec-10] c.t.u.m.UserDetailMapper.queryByPage     : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.id, u.username, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id ORDER BY create_time DESC LIMIT ?
+00:17:08.294-[LAPTOP-93DPAS1G][7c2b055810134f0b9b1512f11cd76488]--DEBUG 25324 --- [io-8082-exec-10] c.t.u.m.UserDetailMapper.queryByPage     : ==> Parameters: 10(Long)
+00:17:08.296-[LAPTOP-93DPAS1G][7c2b055810134f0b9b1512f11cd76488]--DEBUG 25324 --- [io-8082-exec-10] c.t.u.m.UserDetailMapper.queryByPage     : <==      Total: 2
+00:17:12.682-[LAPTOP-93DPAS1G][cf73595c9ac44a4f85aea0022e7c1c05]--DEBUG 25324 --- [nio-8082-exec-2] c.t.u.mapper.UserDetailMapper.queryById  : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.username ,u.id, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id WHERE u.id = ?
+00:17:12.683-[LAPTOP-93DPAS1G][cf73595c9ac44a4f85aea0022e7c1c05]--DEBUG 25324 --- [nio-8082-exec-2] c.t.u.mapper.UserDetailMapper.queryById  : ==> Parameters: 5(Long)
+00:17:12.685-[LAPTOP-93DPAS1G][cf73595c9ac44a4f85aea0022e7c1c05]--DEBUG 25324 --- [nio-8082-exec-2] c.t.u.mapper.UserDetailMapper.queryById  : <==      Total: 1
+00:17:16.185-[LAPTOP-93DPAS1G][ac282e5d59b4496483f754107d5a4284]--DEBUG 25324 --- [nio-8082-exec-1] c.t.user.mapper.UserMapper.updateById    : ==>  Preparing: UPDATE user SET username=?, role=? WHERE id=?
+00:17:16.186-[LAPTOP-93DPAS1G][ac282e5d59b4496483f754107d5a4284]--DEBUG 25324 --- [nio-8082-exec-1] c.t.user.mapper.UserMapper.updateById    : ==> Parameters: CHN0000001(String), 2(Integer), 5(Long)
+00:17:16.191-[LAPTOP-93DPAS1G][ac282e5d59b4496483f754107d5a4284]--DEBUG 25324 --- [nio-8082-exec-1] c.t.user.mapper.UserMapper.updateById    : <==    Updates: 1
+00:17:16.197-[LAPTOP-93DPAS1G][ac282e5d59b4496483f754107d5a4284]--DEBUG 25324 --- [nio-8082-exec-1] c.t.u.m.UserDetailMapper.updateById      : ==>  Preparing: UPDATE user_detail SET username=?, role=?, name=?, email=? WHERE id=?
+00:17:16.197-[LAPTOP-93DPAS1G][ac282e5d59b4496483f754107d5a4284]--DEBUG 25324 --- [nio-8082-exec-1] c.t.u.m.UserDetailMapper.updateById      : ==> Parameters: CHN0000001(String), 2(Integer), 测试新增和编辑(String), test@163.com(String), 5(Long)
+00:17:16.199-[LAPTOP-93DPAS1G][ac282e5d59b4496483f754107d5a4284]--DEBUG 25324 --- [nio-8082-exec-1] c.t.u.m.UserDetailMapper.updateById      : <==    Updates: 1
+00:17:16.259-[LAPTOP-93DPAS1G][9a2c4979008043ad8e9bb50289c5d5ba]--DEBUG 25324 --- [nio-8082-exec-3] c.t.u.m.U.queryByPage_mpCount            : ==>  Preparing: SELECT COUNT(*) FROM `user` u
+00:17:16.259-[LAPTOP-93DPAS1G][9a2c4979008043ad8e9bb50289c5d5ba]--DEBUG 25324 --- [nio-8082-exec-3] c.t.u.m.U.queryByPage_mpCount            : ==> Parameters: 
+00:17:16.261-[LAPTOP-93DPAS1G][9a2c4979008043ad8e9bb50289c5d5ba]--DEBUG 25324 --- [nio-8082-exec-3] c.t.u.m.U.queryByPage_mpCount            : <==      Total: 1
+00:17:16.262-[LAPTOP-93DPAS1G][9a2c4979008043ad8e9bb50289c5d5ba]--DEBUG 25324 --- [nio-8082-exec-3] c.t.u.m.UserDetailMapper.queryByPage     : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.id, u.username, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id ORDER BY create_time DESC LIMIT ?
+00:17:16.263-[LAPTOP-93DPAS1G][9a2c4979008043ad8e9bb50289c5d5ba]--DEBUG 25324 --- [nio-8082-exec-3] c.t.u.m.UserDetailMapper.queryByPage     : ==> Parameters: 10(Long)
+00:17:16.265-[LAPTOP-93DPAS1G][9a2c4979008043ad8e9bb50289c5d5ba]--DEBUG 25324 --- [nio-8082-exec-3] c.t.u.m.UserDetailMapper.queryByPage     : <==      Total: 2
+00:17:30.484-[LAPTOP-93DPAS1G][ba1871a59b7f4bcc8a6736002da07ea4]--DEBUG 25324 --- [nio-8082-exec-4] c.t.u.mapper.UserDetailMapper.queryById  : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.username ,u.id, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id WHERE u.id = ?
+00:17:30.485-[LAPTOP-93DPAS1G][ba1871a59b7f4bcc8a6736002da07ea4]--DEBUG 25324 --- [nio-8082-exec-4] c.t.u.mapper.UserDetailMapper.queryById  : ==> Parameters: 5(Long)
+00:17:30.487-[LAPTOP-93DPAS1G][ba1871a59b7f4bcc8a6736002da07ea4]--DEBUG 25324 --- [nio-8082-exec-4] c.t.u.mapper.UserDetailMapper.queryById  : <==      Total: 1
+00:17:35.531-[LAPTOP-93DPAS1G][888b196347e14acfa73d8b08f185cac2]--DEBUG 25324 --- [nio-8082-exec-8] c.t.user.mapper.UserMapper.updateById    : ==>  Preparing: UPDATE user SET username=?, role=? WHERE id=?
+00:17:35.532-[LAPTOP-93DPAS1G][888b196347e14acfa73d8b08f185cac2]--DEBUG 25324 --- [nio-8082-exec-8] c.t.user.mapper.UserMapper.updateById    : ==> Parameters: CHN0000001(String), 2(Integer), 5(Long)
+00:17:35.535-[LAPTOP-93DPAS1G][888b196347e14acfa73d8b08f185cac2]--DEBUG 25324 --- [nio-8082-exec-8] c.t.user.mapper.UserMapper.updateById    : <==    Updates: 1
+00:17:35.536-[LAPTOP-93DPAS1G][888b196347e14acfa73d8b08f185cac2]--DEBUG 25324 --- [nio-8082-exec-8] c.t.u.m.UserDetailMapper.updateById      : ==>  Preparing: UPDATE user_detail SET username=?, role=?, name=?, email=? WHERE id=?
+00:17:35.536-[LAPTOP-93DPAS1G][888b196347e14acfa73d8b08f185cac2]--DEBUG 25324 --- [nio-8082-exec-8] c.t.u.m.UserDetailMapper.updateById      : ==> Parameters: CHN0000001(String), 2(Integer), 测试(String), test@163.com(String), 5(Long)
+00:17:35.558-[LAPTOP-93DPAS1G][888b196347e14acfa73d8b08f185cac2]--DEBUG 25324 --- [nio-8082-exec-8] c.t.u.m.UserDetailMapper.updateById      : <==    Updates: 1
+00:17:35.634-[LAPTOP-93DPAS1G][92ae5932d16f4234b9e3242c9300e78e]--DEBUG 25324 --- [nio-8082-exec-6] c.t.u.m.U.queryByPage_mpCount            : ==>  Preparing: SELECT COUNT(*) FROM `user` u
+00:17:35.634-[LAPTOP-93DPAS1G][92ae5932d16f4234b9e3242c9300e78e]--DEBUG 25324 --- [nio-8082-exec-6] c.t.u.m.U.queryByPage_mpCount            : ==> Parameters: 
+00:17:35.637-[LAPTOP-93DPAS1G][92ae5932d16f4234b9e3242c9300e78e]--DEBUG 25324 --- [nio-8082-exec-6] c.t.u.m.U.queryByPage_mpCount            : <==      Total: 1
+00:17:35.638-[LAPTOP-93DPAS1G][92ae5932d16f4234b9e3242c9300e78e]--DEBUG 25324 --- [nio-8082-exec-6] c.t.u.m.UserDetailMapper.queryByPage     : ==>  Preparing: SELECT u.status, u.create_time, u.update_time, u.creater, u.updater, u.id, u.username, ud.role, ud.name, ud.email FROM `user` u LEFT JOIN user_detail ud ON u.id = ud.id ORDER BY create_time DESC LIMIT ?
+00:17:35.639-[LAPTOP-93DPAS1G][92ae5932d16f4234b9e3242c9300e78e]--DEBUG 25324 --- [nio-8082-exec-6] c.t.u.m.UserDetailMapper.queryByPage     : ==> Parameters: 10(Long)
+00:17:35.641-[LAPTOP-93DPAS1G][92ae5932d16f4234b9e3242c9300e78e]--DEBUG 25324 --- [nio-8082-exec-6] c.t.u.m.UserDetailMapper.queryByPage     : <==      Total: 2

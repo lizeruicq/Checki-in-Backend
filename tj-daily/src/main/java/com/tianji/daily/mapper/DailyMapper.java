@@ -13,4 +13,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface DailyMapper extends BaseMapper<Daily> {
 
+    Daily queryById(int id);
 }

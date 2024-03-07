@@ -18,7 +18,7 @@ public class DailyVO {
     private LocalDate date;
 
     @ApiModelProperty(value = "考勤类别")
-    private DateType datetype;
+    private String datetype;
 
     @ApiModelProperty(value = "上班时间")
     private String ondutytime;

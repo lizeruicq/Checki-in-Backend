@@ -19,6 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.tianji.daily.enums.DateType;
 import org.springframework.transaction.annotation.Transactional;
+import static com.tianji.daily.contants.DailyConstants.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -52,35 +53,60 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
         daily.setDatetype(type);
         daily.setOndutytime(dailyDTO.getOndutytime());
         daily.setOffdutytime(dailyDTO.getOffdutytime());
-        daily.setRdmno1(dailyDTO.getRdmNo1());
-        daily.setRdmno2(dailyDTO.getRdmNo2());
-        daily.setRdmno3(dailyDTO.getRdmNo3());
+        daily.setRdmno1(dailyDTO.getRdmno1());
+        daily.setRdmno2(dailyDTO.getRdmno2());
+        daily.setRdmno3(dailyDTO.getRdmno3());
         Double worklength = dailyDTO.getWorklength();
         daily.setWorklength(worklength);
         save(daily);
 
+        saveDetail(dailyDTO,daily.getId());
+
+//        List<String> rdms = new ArrayList<String>();
+//        String rdmNo1 = dailyDTO.getRdmno1();
+//        if (rdmNo1 != null && !rdmNo1.trim().isEmpty()){rdms.add(rdmNo1);}
+//        String rdmNo2 = dailyDTO.getRdmno2();
+//        if (rdmNo2!= null && !rdmNo2.trim().isEmpty()){rdms.add(rdmNo2);}
+//        String rdmNo3 = dailyDTO.getRdmno3();
+//        if (rdmNo3!= null && !rdmNo3.trim().isEmpty()){rdms.add(rdmNo3);}
+//
+//        System.out.println(worklength+" "+rdms.size());
+//        String avgLen = String.valueOf(worklength / rdms.size());
+//
+//        List<DailyDetail> dailyDetails = new ArrayList<>();
+//        for (String rdm : rdms) {
+//            DailyDetail dailyDetail = BeanUtils.toBean(dailyDTO, DailyDetail.class);
+//            dailyDetail.setId(daily.getId());
+//            dailyDetail.setRdmno(rdm);
+//            dailyDetail.setRdmnoLen(avgLen);
+//            dailyDetails.add(dailyDetail);
+//        }
+//        dailyDetailService.saveBatch(dailyDetails);
+
+    }
+
+    public void saveDetail(DailyDTO dailyDTO, int Id)
+    {
         List<String> rdms = new ArrayList<String>();
-        String rdmNo1 = dailyDTO.getRdmNo1();
+        String rdmNo1 = dailyDTO.getRdmno1();
         if (rdmNo1 != null && !rdmNo1.trim().isEmpty()){rdms.add(rdmNo1);}
-        String rdmNo2 = dailyDTO.getRdmNo2();
+        String rdmNo2 = dailyDTO.getRdmno2();
         if (rdmNo2!= null && !rdmNo2.trim().isEmpty()){rdms.add(rdmNo2);}
-        String rdmNo3 = dailyDTO.getRdmNo3();
+        String rdmNo3 = dailyDTO.getRdmno3();
         if (rdmNo3!= null && !rdmNo3.trim().isEmpty()){rdms.add(rdmNo3);}
 
-        System.out.println(worklength+" "+rdms.size());
-        String avgLen = String.valueOf(worklength / rdms.size());
+//        System.out.println(worklength+" "+rdms.size());
+        String avgLen = String.valueOf(dailyDTO.getWorklength() / rdms.size());
 
         List<DailyDetail> dailyDetails = new ArrayList<>();
         for (String rdm : rdms) {
             DailyDetail dailyDetail = BeanUtils.toBean(dailyDTO, DailyDetail.class);
-            dailyDetail.setId(daily.getId());
+            dailyDetail.setId(Id);
             dailyDetail.setRdmno(rdm);
             dailyDetail.setRdmnoLen(avgLen);
             dailyDetails.add(dailyDetail);
         }
         dailyDetailService.saveBatch(dailyDetails);
-
-
     }
 
     @Override
@@ -92,23 +118,55 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
         Page<Daily> p = query.toMpPageDefaultSortByCreateTimeDesc();
 
         LambdaQueryWrapper<Daily> wrapper = new LambdaQueryWrapper<>();
+
         wrapper.eq(name!=null,Daily::getName,name);
-
-        wrapper.and(wq  -> wq.eq(rdmno!=null,Daily::getRdmno1,rdmno).
-                or().eq(rdmno!=null,Daily::getRdmno2,rdmno).
-                or().eq(rdmno!=null,Daily::getRdmno3,rdmno));
-
+        if(rdmno!=null)
+        {
+            wrapper.and(wq  -> wq.eq(rdmno!=null,Daily::getRdmno1,rdmno).
+                    or().eq(rdmno!=null,Daily::getRdmno2,rdmno).
+                    or().eq(rdmno!=null,Daily::getRdmno3,rdmno));
+        }
         wrapper.eq(date!=null,Daily::getDate,date);
 
         p = dailyMapper.selectPage(p,wrapper);
 
         return PageDTO.of(p, u -> {
+            DateType type = u.getDatetype();
             DailyVO v = BeanUtils.toBean(u, DailyVO.class);
+            switch (type) {
+                case WORKDAY:
+                    v.setDatetype(WORK_DAY);
+                    break;
+                case DAYOFF:
+                    v.setDatetype(DAY_OFF);
+                    break;
+
+                default:
+                    break;
+            }
             return v;
         });
         }
 
+    @Override
+    public Daily queryById(int id) {
+        return getBaseMapper().queryById(id);
+    }
 
+    @Override
+    @Transactional
+    public void updateDaily(DailyDTO dailyDTO) {
+        DateType type = DateType.of(dailyDTO.getDatetype());
+        Daily daily = BeanUtils.toBean(dailyDTO,Daily.class);
+        daily.setDatetype(type);
+        updateById(daily);
+        // 2.修改详情
+
+        int id = dailyDTO.getId();
+        dailyDetailService.removeById(id);
+        saveDetail(dailyDTO,id);
+
+    }
 
 
 }

@@ -30,11 +30,11 @@ public class DailyDTO {
     @NotNull
     private Integer datetype;
     @ApiModelProperty(value = "需求号1", example = "S2024030312345")
-    private String rdmNo1;
+    private String rdmno1;
     @ApiModelProperty(value = "需求号2", example = "S2024030312345")
-    private String rdmNo2;
+    private String rdmno2;
     @ApiModelProperty(value = "需求号3", example = "S2024030312345")
-    private String rdmNo3;
+    private String rdmno3;
     @ApiModelProperty(value = "工作人天", example = "1")
     private Double worklength;
 }

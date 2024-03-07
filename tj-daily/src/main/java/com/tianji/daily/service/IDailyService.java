@@ -20,4 +20,8 @@ public interface IDailyService extends IService<Daily> {
     void saveDaily(DailyDTO dailyDTO);
 
     PageDTO<DailyVO> queryDailyPage(DailyPageQuery query);
+
+    Daily queryById(int id);
+
+    void updateDaily(DailyDTO dailyDTO);
 }
