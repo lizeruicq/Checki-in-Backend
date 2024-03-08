@@ -21,9 +21,11 @@ import com.tianji.daily.enums.DateType;
 import org.springframework.transaction.annotation.Transactional;
 import static com.tianji.daily.contants.DailyConstants.*;
 
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * <p>
@@ -150,7 +152,10 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
 
     @Override
     public Daily queryById(int id) {
-        return getBaseMapper().queryById(id);
+
+        Daily daily =  getBaseMapper().queryById(id);
+        System.out.println(daily);
+        return daily;
     }
 
     @Override

@@ -4,7 +4,7 @@
 
     <select id="queryById" resultType="com.tianji.daily.domain.po.Daily">
          SELECT
-         d.date,d.datetype,d.ondutytime,d.offdutytime,d.rdmno1,d.rdmno2,d.rdmno3,d.worklength
+         d.id,d.date,d.datetype,d.ondutytime,d.offdutytime,d.rdmno1,d.rdmno2,d.rdmno3,d.worklength
         FROM `daily` d
         WHERE d.id = #{id}
     </select>
