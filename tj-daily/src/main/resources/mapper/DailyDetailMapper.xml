@@ -2,4 +2,21 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tianji.daily.mapper.DailyDetailMapper">
 
-    </mapper>
+<!--    <select id="selectDailyPerson" resultType="com.tianji.daily.domain.vo.DailyPersonVO">-->
+<!--        select-->
+<!--        name,username,rdmno,sum(rdmno_len) as sumlength-->
+<!--        from daily_detail-->
+<!--            WHERE name = #{name}-->
+<!--            AND rdmno = #{rdmno}-->
+<!--            AND date  <![CDATA[   >=  ]]> #{startdate}-->
+<!--            AND date  <![CDATA[   <=  ]]> #{enddate}-->
+<!--        GROUP BY name,username,rdmno-->
+<!--    </select>-->
+    <select id="queryDailyPerson" resultType="com.tianji.daily.domain.vo.DailyPersonVO">
+        select
+        name,username,rdmno,sum(rdmno_len) as sumlength
+        from daily_detail
+           ${ew.customSqlSegment}
+        GROUP BY name,username,rdmno
+    </select>
+</mapper>

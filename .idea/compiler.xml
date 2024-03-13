@@ -9,14 +9,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="tj-auth-resource-sdk" />
         <module name="tj-auth-service" />
+        <module name="tj-gateway" />
         <module name="tj-api" />
         <module name="tj-user" />
-        <module name="tj-common" />
         <module name="tj-auth-common" />
         <module name="tj-daily" />
         <module name="tj-auth-gateway-sdk" />
         <module name="ai" />
-        <module name="tj-gateway" />
+        <module name="tj-common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
