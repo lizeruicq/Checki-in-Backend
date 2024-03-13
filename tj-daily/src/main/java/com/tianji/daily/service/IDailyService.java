@@ -4,7 +4,9 @@ import com.tianji.common.domain.dto.PageDTO;
 import com.tianji.daily.domain.dto.DailyDTO;
 import com.tianji.daily.domain.po.Daily;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.tianji.daily.domain.query.DailyCalQuery;
 import com.tianji.daily.domain.query.DailyPageQuery;
+import com.tianji.daily.domain.vo.DailyCalVO;
 import com.tianji.daily.domain.vo.DailyVO;
 
 /**
@@ -24,4 +26,6 @@ public interface IDailyService extends IService<Daily> {
     Daily queryById(int id);
 
     void updateDaily(DailyDTO dailyDTO);
+
+    DailyCalVO DailyCalculator(DailyCalQuery query);
 }

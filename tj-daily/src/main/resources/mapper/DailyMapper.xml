@@ -8,4 +8,16 @@
         FROM `daily` d
         WHERE d.id = #{id}
     </select>
+    <select id="querytotaldays" resultType="java.lang.Double">
+
+        SELECT SUM(worklength) FROM daily
+        WHERE 1=1
+        <if test="name != null and name != ''">
+            AND name = #{name}
+        </if>
+        <if test="username != null and username != ''">
+            AND username = #{username}
+        </if>
+    </select>
+
 </mapper>

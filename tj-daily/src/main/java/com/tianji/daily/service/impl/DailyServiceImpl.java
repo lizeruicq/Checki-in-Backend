@@ -4,12 +4,14 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.tianji.common.domain.dto.PageDTO;
-import com.tianji.common.enums.UserType;
+import java.time.temporal.ChronoUnit;
 import com.tianji.common.utils.BeanUtils;
 import com.tianji.daily.domain.dto.DailyDTO;
 import com.tianji.daily.domain.po.Daily;
 import com.tianji.daily.domain.po.DailyDetail;
+import com.tianji.daily.domain.query.DailyCalQuery;
 import com.tianji.daily.domain.query.DailyPageQuery;
+import com.tianji.daily.domain.vo.DailyCalVO;
 import com.tianji.daily.domain.vo.DailyVO;
 import com.tianji.daily.mapper.DailyMapper;
 import com.tianji.daily.service.IDailyDetailService;
@@ -171,6 +173,30 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
         dailyDetailService.removeById(id);
         saveDetail(dailyDTO,id);
 
+    }
+
+    @Override
+    public DailyCalVO DailyCalculator(DailyCalQuery query) {
+        String name = query.getName();
+        String username = query.getUsername();
+//        LocalDate startDate = query.getStartdate();
+//        LocalDate endDate = query.getEnddate();
+        LocalDate startdate = LocalDate.of(2024, 1, 1);
+        LocalDate enddate = LocalDate.of(2024, 12, 1);
+        Integer dayoffnums = query.getDayoffnums();
+
+        DailyCalVO vo = new DailyCalVO();
+        vo.setName(name);
+        vo.setUsername(username);
+
+        Double totaldays = dailyMapper.querytotaldays(name,username,startdate,enddate);
+        Double standarddays = (double) ChronoUnit.DAYS.between(startdate, enddate)-dayoffnums;
+        Double leftdays = standarddays-totaldays;
+
+        vo.setTotledays(totaldays);
+        vo.setStandarddays(standarddays);
+        vo.setLeftdays(leftdays);
+        return vo;
     }
 
 

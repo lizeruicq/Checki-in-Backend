@@ -3,6 +3,8 @@ package com.tianji.daily.mapper;
 import com.tianji.daily.domain.po.Daily;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
+import java.time.LocalDate;
+
 /**
  * <p>
  *  Mapper 接口
@@ -14,4 +16,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 public interface DailyMapper extends BaseMapper<Daily> {
 
     Daily queryById(int id);
+
+    Double querytotaldays(String name, String username, LocalDate startdate, LocalDate enddate);
+
+    ;
 }

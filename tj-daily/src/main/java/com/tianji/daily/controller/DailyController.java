@@ -5,7 +5,9 @@ import com.tianji.common.domain.dto.PageDTO;
 import com.tianji.common.utils.BeanUtils;
 import com.tianji.daily.domain.dto.DailyDTO;
 import com.tianji.daily.domain.po.Daily;
+import com.tianji.daily.domain.query.DailyCalQuery;
 import com.tianji.daily.domain.query.DailyPageQuery;
+import com.tianji.daily.domain.vo.DailyCalVO;
 import com.tianji.daily.domain.vo.DailyVO;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -47,6 +49,12 @@ public class DailyController {
     @GetMapping("page")
     public PageDTO<DailyVO> queryDailyPage(DailyPageQuery pageQuery) {
         return dailyService.queryDailyPage(pageQuery);
+    }
+
+    @ApiOperation("考勤总人天计算器")
+    @GetMapping("cal")
+    public DailyCalVO DailyCalculator(DailyCalQuery dailyCalQuery) {
+        return dailyService.DailyCalculator(dailyCalQuery);
     }
 
 
