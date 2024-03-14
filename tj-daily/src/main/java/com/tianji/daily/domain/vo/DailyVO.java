@@ -43,4 +43,7 @@ public class DailyVO {
 
     @ApiModelProperty(value = "工作人天")
     private Double worklength;
+
+    @ApiModelProperty(value = "备注说明")
+    private String note;
 }

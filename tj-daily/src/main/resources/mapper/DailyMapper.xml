@@ -18,6 +18,34 @@
         <if test="username != null and username != ''">
             AND username = #{username}
         </if>
+        <if test="startdate != null">
+            AND date >= #{startdate}
+        </if>
+        <if test="enddate != null">
+            AND date <![CDATA[   <=  ]]> #{enddate}
+        </if>
     </select>
+
+    <select id="findByDate" resultType="java.lang.Integer" parameterType="java.time.LocalDate">
+        select count(date) from daily
+    </select>
+    <select id="queryoffdayrecords" resultType="java.lang.Double">
+        select count(date) from daily
+        WHERE 1=1
+        <if test="name != null and name != ''">
+            AND name = #{name}
+        </if>
+        <if test="username != null and username != ''">
+            AND username = #{username}
+        </if>
+        <if test="startdate != null">
+            AND date >= #{startdate}
+        </if>
+        <if test="enddate != null">
+            AND date <![CDATA[   <=  ]]> #{enddate}
+        </if>
+        AND datetype = 1
+    </select>
+
 
 </mapper>

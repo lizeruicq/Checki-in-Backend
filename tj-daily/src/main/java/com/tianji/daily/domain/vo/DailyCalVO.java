@@ -25,5 +25,11 @@ public class DailyCalVO {
     @ApiModelProperty(value = "结余人天")
     private Double leftdays;
 
+    @ApiModelProperty(value = "抵扣后的工作日加班")
+    private Double workdayot;
+
+    @ApiModelProperty(value = "抵扣后的非工作日加班")
+    private Double offdayot;
+
 
 }

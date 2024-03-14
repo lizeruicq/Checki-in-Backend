@@ -37,4 +37,7 @@ public class DailyDTO {
     private String rdmno3;
     @ApiModelProperty(value = "工作人天", example = "1")
     private Double worklength;
+
+    @ApiModelProperty(value = "备注说明", example = "特别时段加班")
+    private String note;
 }

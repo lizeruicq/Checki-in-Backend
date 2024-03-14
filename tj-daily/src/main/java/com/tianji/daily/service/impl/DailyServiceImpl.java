@@ -4,7 +4,11 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.tianji.common.domain.dto.PageDTO;
+
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+
+import com.tianji.common.exceptions.BadRequestException;
 import com.tianji.common.utils.BeanUtils;
 import com.tianji.daily.domain.dto.DailyDTO;
 import com.tianji.daily.domain.po.Daily;
@@ -49,9 +53,16 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
     @Override
     @Transactional
     public void saveDaily(DailyDTO dailyDTO) {
+
+        LocalDate date = LocalDate.parse((dailyDTO.getDate()));
+        Integer existingDaily = getBaseMapper().findByDate(date);
+        if (existingDaily != null) {
+            // 如果存在，则抛出异常
+            throw new  BadRequestException("该日期已存在记录,请维护已有记录");
+        }
         DateType type = DateType.of(dailyDTO.getDatetype());
         Daily daily = new Daily();
-        daily.setDate(LocalDate.parse((dailyDTO.getDate())));
+        daily.setDate(date);
         daily.setName(dailyDTO.getName());
         daily.setUsername(dailyDTO.getUsername());
         daily.setDatetype(type);
@@ -62,9 +73,14 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
         daily.setRdmno3(dailyDTO.getRdmno3());
         Double worklength = dailyDTO.getWorklength();
         daily.setWorklength(worklength);
+        daily.setNote(dailyDTO.getNote());
         save(daily);
 
+        if (dailyDTO.getDatetype() != 2)
+    {
         saveDetail(dailyDTO,daily.getId());
+    }
+
 
 //        List<String> rdms = new ArrayList<String>();
 //        String rdmNo1 = dailyDTO.getRdmno1();
@@ -124,12 +140,12 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
         LambdaQueryWrapper<Daily> wrapper = new LambdaQueryWrapper<>();
 
         wrapper.eq(name!=null,Daily::getName,name);
-        if(rdmno!=null)
-        {
-            wrapper.and(wq  -> wq.eq(rdmno!=null,Daily::getRdmno1,rdmno).
-                    or().eq(rdmno!=null,Daily::getRdmno2,rdmno).
-                    or().eq(rdmno!=null,Daily::getRdmno3,rdmno));
-        }
+//        if(rdmno!=null)
+//        {
+        wrapper.and(wq  -> wq.eq(rdmno!=null,Daily::getRdmno1,rdmno).
+                or().eq(rdmno!=null,Daily::getRdmno2,rdmno).
+                or().eq(rdmno!=null,Daily::getRdmno3,rdmno));
+//        }
         wrapper.eq(date!=null,Daily::getDate,date);
 
         p = dailyMapper.selectPage(p,wrapper);
@@ -143,6 +159,9 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
                     break;
                 case DAYOFF:
                     v.setDatetype(DAY_OFF);
+                    break;
+                case REST:
+                    v.setDatetype(REST);
                     break;
 
                 default:
@@ -179,10 +198,11 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
     public DailyCalVO DailyCalculator(DailyCalQuery query) {
         String name = query.getName();
         String username = query.getUsername();
-//        LocalDate startDate = query.getStartdate();
-//        LocalDate endDate = query.getEnddate();
-        LocalDate startdate = LocalDate.of(2024, 1, 1);
-        LocalDate enddate = LocalDate.of(2024, 12, 1);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate startdate = LocalDate.parse(query.getStartdate(), formatter);
+        LocalDate enddate = LocalDate.parse(query.getEnddate(), formatter);
+//        LocalDate startdate = LocalDate.of(2024, 1, 1);
+//        LocalDate enddate = LocalDate.of(2024, 12, 1);
         Integer dayoffnums = query.getDayoffnums();
 
         DailyCalVO vo = new DailyCalVO();
@@ -190,8 +210,30 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
         vo.setUsername(username);
 
         Double totaldays = dailyMapper.querytotaldays(name,username,startdate,enddate);
-        Double standarddays = (double) ChronoUnit.DAYS.between(startdate, enddate)-dayoffnums;
-        Double leftdays = standarddays-totaldays;
+        Double standarddays = (double) ChronoUnit.DAYS.between(startdate, enddate)+1-dayoffnums;
+        Double leftdays = totaldays-standarddays;
+
+        if (leftdays>0)
+        {
+            Double offdayrecords = dailyMapper.queryoffdayrecords(name,username,startdate,enddate);
+            if(offdayrecords<=leftdays){
+                Double offdayot = offdayrecords;
+                Double workdayot = leftdays-offdayot;
+                //抵消后的加班非工作日和工作日加班天数
+                vo.setOffdayot(offdayot);
+                vo.setWorkdayot(workdayot);
+            }
+            else{
+                Double offdayot = leftdays;
+                Double workdayot = 0.0;
+                //抵消后的加班非工作日和工作日加班天数
+                vo.setOffdayot(offdayot);
+                vo.setWorkdayot(workdayot);
+            }
+
+        }
+
+
 
         vo.setTotledays(totaldays);
         vo.setStandarddays(standarddays);

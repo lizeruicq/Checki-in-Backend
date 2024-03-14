@@ -20,9 +20,9 @@ public class DailyCalQuery  {
     @ApiModelProperty(value = "工号")
     private String username;
     @ApiModelProperty(value = "开始日期")
-    private LocalDate startdate;
+    private String startdate;
     @ApiModelProperty(value = "结束日期")
-    private LocalDate enddate;
+    private String enddate;
     @ApiModelProperty(value = "非工作日天数")
     private Integer dayoffnums ;
 }

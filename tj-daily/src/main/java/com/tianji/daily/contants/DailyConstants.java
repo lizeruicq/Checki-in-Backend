@@ -8,5 +8,7 @@ public interface DailyConstants {
 
     String DAY_OFF = "非工作日";
 
+    String REST = "请假/调休";
+
 
 }

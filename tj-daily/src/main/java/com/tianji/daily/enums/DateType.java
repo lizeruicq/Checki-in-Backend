@@ -8,8 +8,10 @@ import lombok.Getter;
 
 @Getter
 public enum DateType implements BaseEnum {
-    WORKDAY(0,"工作日"),
-    DAYOFF(1, "非工作日"),;
+    WORKDAY(0,"工作日上班"),
+    DAYOFF(1, "非工作日上班"),
+    REST(2, "请假/调休"),
+    ;
 
     @EnumValue
     int value;

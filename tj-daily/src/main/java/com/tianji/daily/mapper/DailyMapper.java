@@ -19,5 +19,10 @@ public interface DailyMapper extends BaseMapper<Daily> {
 
     Double querytotaldays(String name, String username, LocalDate startdate, LocalDate enddate);
 
+    Integer findByDate(LocalDate date);
+
+    Double queryoffdayrecords(String name,String username, LocalDate startdate, LocalDate enddate);
+
+
     ;
 }

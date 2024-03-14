@@ -75,6 +75,9 @@ public class Daily implements Serializable {
     @TableField("worklength")
     private Double worklength;
 
+    @ApiModelProperty(value = "备注说明")
+    @TableField("note")
+    private String note;
 
 
     /**
