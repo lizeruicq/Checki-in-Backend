@@ -34,11 +34,12 @@ public class UserDetailServiceImpl extends ServiceImpl<UserDetailMapper, UserDet
         // 2.搜索条件
         Integer status = query.getStatus();
         String name = query.getName();
-        String phone = query.getPhone();
+        String username = query.getUsername();
         QueryWrapper<UserDetail> wrapper = new QueryWrapper<>();
         wrapper
 //                .eq(role != null , "u.type", role)
-                .eq(status != null, "u.status", status)
+//                .eq(status != null, "u.status", status)
+                .eq(username != null, "u.username", username)
                 .like(StringUtils.isNotBlank(name), "ud.name", name);
         // 3.查询
         p = getBaseMapper().queryByPage(p, wrapper);

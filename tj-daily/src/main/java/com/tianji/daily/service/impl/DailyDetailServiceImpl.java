@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 /**
@@ -28,6 +29,7 @@ import java.util.List;
  */
 @Service
 public class DailyDetailServiceImpl extends ServiceImpl<DailyDetailMapper, DailyDetail> implements IDailyDetailService {
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     @Autowired
     private DailyDetailMapper detailMapper;
@@ -36,14 +38,20 @@ public class DailyDetailServiceImpl extends ServiceImpl<DailyDetailMapper, Daily
     public PageDTO<DailyPersonVO> queryPersonlengthPage(DailyPersonRdmQuery query) {
         String name = query.getName();
         String rdmno = query.getRdmno();
-        LocalDate startdate = query.getStartdate();
-        LocalDate enddate = query.getEnddate();
-
+        LocalDate startdate = LocalDate.parse("2000-01-01", formatter);
+        LocalDate enddate = LocalDate.parse("2099-01-01", formatter);
+        if (query.getStartdate() != null && query.getStartdate() != null)
+        {
+            startdate = LocalDate.parse(query.getStartdate(), formatter);
+            enddate = LocalDate.parse(query.getEnddate(), formatter);
+        }
         Page<DailyPersonVO> p = query.toMpPage("name",false);
         QueryWrapper<DailyPersonVO> wrapper = new QueryWrapper<>();
         wrapper
                 .eq(name != null, "name", name)
-                .eq(rdmno != null, "rdmno", rdmno);
+                .eq(rdmno != null, "rdmno", rdmno)
+                .ge(startdate != null,"date",startdate)
+                .le(enddate != null,"date",enddate);
         p = getBaseMapper().queryDailyPerson(p, wrapper);
         // 4.返回
 

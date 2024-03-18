@@ -26,7 +26,7 @@ public class DailyDTO {
     @ApiModelProperty(value = "下班时间", example = "18:00")
     private String offdutytime;
     @ApiModelProperty(value = "考勤类型", example = "0")
-    @EnumValid(enumeration = {0,1}, message = "考勤类型错误误")
+    @EnumValid(enumeration = {0,1,2}, message = "考勤类型错误误")
     @NotNull
     private Integer datetype;
     @ApiModelProperty(value = "需求号1", example = "S2024030312345")

@@ -26,9 +26,10 @@
         </if>
     </select>
 
-    <select id="findByDate" resultType="java.lang.Integer" parameterType="java.time.LocalDate">
-        select count(date) from daily
+    <select id="findByDate" resultType="java.lang.Integer">
+        select count(*) from daily where username = #{username} and date = #{date}
     </select>
+
     <select id="queryoffdayrecords" resultType="java.lang.Double">
         select count(date) from daily
         WHERE 1=1

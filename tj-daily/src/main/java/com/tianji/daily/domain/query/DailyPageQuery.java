@@ -17,5 +17,7 @@ public class DailyPageQuery extends PageQuery {
     @ApiModelProperty(value = "需求号")
     private String rdmno;
     @ApiModelProperty(value = "日期")
-    private LocalDate date;
+    private String date;
+    @ApiModelProperty(value = "工号")
+    private String username;
 }

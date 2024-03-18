@@ -19,7 +19,7 @@ public class DailyPersonRdmQuery extends PageQuery {
     @ApiModelProperty(value = "需求号")
     private String rdmno;
     @ApiModelProperty(value = "开始日期")
-    private LocalDate startdate;
+    private String startdate;
     @ApiModelProperty(value = "结束日期")
-    private LocalDate enddate;
+    private String enddate;
 }

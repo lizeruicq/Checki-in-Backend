@@ -43,6 +43,7 @@ import java.util.Optional;
  */
 @Service
 public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements IDailyService {
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     @Autowired
     private IDailyDetailService dailyDetailService;
@@ -55,8 +56,12 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
     public void saveDaily(DailyDTO dailyDTO) {
 
         LocalDate date = LocalDate.parse((dailyDTO.getDate()));
-        Integer existingDaily = getBaseMapper().findByDate(date);
-        if (existingDaily != null) {
+        String username = dailyDTO.getUsername();
+        Integer existingDaily = getBaseMapper().findByDate(username,date);
+
+        System.out.println("返回的登记数量"+existingDaily);
+
+        if (existingDaily > 0) {
             // 如果存在，则抛出异常
             throw new  BadRequestException("该日期已存在记录,请维护已有记录");
         }
@@ -64,7 +69,7 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
         Daily daily = new Daily();
         daily.setDate(date);
         daily.setName(dailyDTO.getName());
-        daily.setUsername(dailyDTO.getUsername());
+        daily.setUsername(username);
         daily.setDatetype(type);
         daily.setOndutytime(dailyDTO.getOndutytime());
         daily.setOffdutytime(dailyDTO.getOffdutytime());
@@ -81,8 +86,7 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
         saveDetail(dailyDTO,daily.getId());
     }
 
-
-//        List<String> rdms = new ArrayList<String>();
+        //        List<String> rdms = new ArrayList<String>();
 //        String rdmNo1 = dailyDTO.getRdmno1();
 //        if (rdmNo1 != null && !rdmNo1.trim().isEmpty()){rdms.add(rdmNo1);}
 //        String rdmNo2 = dailyDTO.getRdmno2();
@@ -132,21 +136,28 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
     @Override
     public PageDTO<DailyVO> queryDailyPage(DailyPageQuery query) {
         String name = query.getName();
+        String username = query.getUsername();
         String rdmno = query.getRdmno();
-        LocalDate date = query.getDate();
+//        LocalDate date = query.getDate();
+
 
         Page<Daily> p = query.toMpPageDefaultSortByCreateTimeDesc();
 
         LambdaQueryWrapper<Daily> wrapper = new LambdaQueryWrapper<>();
 
         wrapper.eq(name!=null,Daily::getName,name);
-//        if(rdmno!=null)
-//        {
+        wrapper.eq(username!=null,Daily::getUsername,username);
+        if(rdmno!=null)
+        {
         wrapper.and(wq  -> wq.eq(rdmno!=null,Daily::getRdmno1,rdmno).
                 or().eq(rdmno!=null,Daily::getRdmno2,rdmno).
                 or().eq(rdmno!=null,Daily::getRdmno3,rdmno));
-//        }
-        wrapper.eq(date!=null,Daily::getDate,date);
+        }
+        if (query.getDate() != null) {
+            LocalDate date = LocalDate.parse(query.getDate(), formatter);
+            wrapper.eq(date!=null,Daily::getDate,date);
+        }
+
 
         p = dailyMapper.selectPage(p,wrapper);
 
@@ -198,7 +209,7 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
     public DailyCalVO DailyCalculator(DailyCalQuery query) {
         String name = query.getName();
         String username = query.getUsername();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate startdate = LocalDate.parse(query.getStartdate(), formatter);
         LocalDate enddate = LocalDate.parse(query.getEnddate(), formatter);
 //        LocalDate startdate = LocalDate.of(2024, 1, 1);

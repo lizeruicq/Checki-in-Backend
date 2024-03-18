@@ -14,6 +14,6 @@ public class UserPageQuery extends PageQuery {
     private Integer status;
     @ApiModelProperty(value = "姓名")
     private String name;
-    @ApiModelProperty(value = "手机号码")
-    private String phone;
+    @ApiModelProperty(value = "工号")
+    private String username;
 }
