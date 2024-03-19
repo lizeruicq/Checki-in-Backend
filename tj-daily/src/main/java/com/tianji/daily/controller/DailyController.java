@@ -71,6 +71,12 @@ public class DailyController {
     public void updateDaily(@RequestBody DailyDTO dailyDTO){
         dailyService.updateDaily(dailyDTO);
     }
+
+    @ApiOperation("删除考勤")
+    @DeleteMapping("/{id}")
+    public void deleteDaily(@ApiParam("考勤id") @PathVariable("id") Integer id){
+        dailyService.deleteDaily(id);
+    }
 }
 
 

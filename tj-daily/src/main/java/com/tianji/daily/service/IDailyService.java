@@ -27,5 +27,7 @@ public interface IDailyService extends IService<Daily> {
 
     void updateDaily(DailyDTO dailyDTO);
 
+    void deleteDaily(int id);
+
     DailyCalVO DailyCalculator(DailyCalQuery query);
 }

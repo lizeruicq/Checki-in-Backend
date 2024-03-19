@@ -201,8 +201,18 @@ public class DailyServiceImpl extends ServiceImpl<DailyMapper, Daily> implements
 
         int id = dailyDTO.getId();
         dailyDetailService.removeById(id);
-        saveDetail(dailyDTO,id);
+        if (dailyDTO.getDatetype() != 2)
+        {
+            saveDetail(dailyDTO,id);
+        }
 
+
+    }
+
+    @Override
+    public void deleteDaily(int id) {
+        dailyMapper.deleteById(id);
+        dailyDetailService.removeById(id);
     }
 
     @Override

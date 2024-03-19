@@ -78,7 +78,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     public void resetPassword(Long userId) {
         User user = new User();
         user.setId(userId);
-//        user.setPassword(passwordEncoder.encode(DEFAULT_PASSWORD));
+        user.setPassword(DEFAULT_PASSWORD);
         AssertUtils.isTrue(updateById(user), USER_ID_NOT_EXISTS);
     }
 
