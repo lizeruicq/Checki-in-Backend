@@ -10,9 +10,9 @@ import org.apache.commons.lang3.StringUtils;
 public class testToken {
 
     public void createToken() {
-        String accessKeyId = "LTAI5tEQgmX35XpkpUFbUj5L";
-        String accessKeySecret = "yY2cx9oiycpAG8fqGMQep49KxM8tA9";
-        String agentKey = "73f9d933d49f460f87fcf9eca9709d7b_p_efm";
+        String accessKeyId = "";
+        String accessKeySecret = "";
+        String agentKey = "";
         String endpoint = "bailian.cn-beijing.aliyuncs.com";
 
         Config config = new Config().setAccessKeyId(accessKeyId)
